@@ -1,0 +1,48 @@
+<h1 style="text-align: center; color:rgb(16, 225, 36)">LoanApplication form</h1>
+<mat-stepper orientation="horizontal">
+    <mat-step>
+      <ng-template matStepLabel>Persional Details</ng-template>
+      <ng-template matStepContent>
+        <p>This content was rendered lazily</p>
+        <button mat-button matStepperNext>Next</button>
+      </ng-template>
+    </mat-step>
+    
+    <mat-step>
+      <ng-template matStepLabel>Documents</ng-template>
+      <p>This content was rendered eagerly</p>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Profession</ng-template>
+        <ng-template matStepContent>
+          <p>This content was rendered lazily</p>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </ng-template>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Dealer</ng-template>
+        <ng-template matStepContent>
+          <p>This content was also rendered lazily</p>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </ng-template>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Loan Disbursement</ng-template>
+        <p>This content was rendered eagerly</p>
+        <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Sanction Letter</ng-template>
+        <p>This content was rendered eagerly</p>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Submit</button>
+      </mat-step>
+  
+    </mat-stepper>
+  

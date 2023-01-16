@@ -1,0 +1,24 @@
+<p>cibilcheck works!</p>
+<div class="alert alert-secondary text-center"><h1>Enquiry Database</h1></div>
+<div class="container">
+<table class="table table-striped">
+<tbody>
+<th>ENQUIRY ID</th>
+<th>ENQUIRY NAME</th>
+<th>ENQUIRY ADDRESS</th>
+<th>MOBILE NO</th>
+<th>EMAIL ID</th>
+<th>STATUS</th>
+
+<tr *ngFor="let d of sdata">
+    <td>{{d.enquiryId}}</td>
+    <td>{{d.enquiryFirstName}}</td>
+    <td>{{d.enquiryAddress}}</td>
+    <td>{{d.enquiryMobileNumber}}</td>
+    <td>{{d.enquiryEmail}}</td>
+    <td>{{d.enquiryStatus}}</td>
+  
+</tr>
+</tbody>                                                                                                                                                    
+</table>
+</div>
