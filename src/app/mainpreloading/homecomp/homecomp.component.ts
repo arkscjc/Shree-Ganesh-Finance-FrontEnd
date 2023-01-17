@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 export class HomecompComponent 
 {
   images = [
-    {path: 'https://source.unsplash.com/800x600/?nature'},
-    {path: 'https://source.unsplash.com/800x600/?car'},
-    {path: 'https://source.unsplash.com/800x600/?moto'},
-    {path: 'https://source.unsplash.com/800x600/?fantasy'},
+    {path: '/assets/picture/car2.jpg/'},
+    {path: '/assets/picture/car1.jpg/'},
+    {path: '/assets/picture/car3.jpg/'},
+    {path: '/assets/picture/car4.jpg/'},
   ]
   
 }

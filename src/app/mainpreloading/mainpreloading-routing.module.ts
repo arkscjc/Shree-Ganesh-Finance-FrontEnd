@@ -20,7 +20,7 @@ const routes: Routes =
           
           children:[
                     {path:"login", component:LoginComponent},
-                    {path:"home", component:HomecompComponent},
+                    {path:"", component:HomecompComponent},
                     {path:"register",component:RegistercompComponent},
                     {path:"footer",component:FooterComponent},
                     {path:"about",component:AboutcompComponent},
