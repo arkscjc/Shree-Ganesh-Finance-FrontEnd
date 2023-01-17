@@ -51,13 +51,32 @@ export class CommonserviceService {
    customerProfession: new CustomerProfession,
    customerDealer: new Dealer,
    customerloandisbursement: new LoanDisbursement,
-
-
    customerVehicleInformation: new CustomerVehicleInformation,
    customerBankDetails: new CustomerBankDetails,
-   customerledger: [],
+   customerledger: [
+    {
+      ledgerId: 0,
+      ledgerCreatedDate: '',
+      totalLoanAmount: 0,
+      payableAmountwithInterest: 0,
+      tenure: 0,
+      monthlyEMI: 0,
+      amountPaidtillDate: 0,
+      remainingAmount: 0,
+      nextEmiDatestart: '',
+      nextEmiDateEnd: '',
+      defaulterCount: 0,
+      previousEmitStatus: '',
+      currentMonthEmiStatus: '',
+      loanEndDate: '',
+      loanStatus: ''
+    }
+   ],
    customerSanctionLetter: new SanctionLetter
  }
+
+ 
+
  customerAllDocuments:AllDocuments={
    documentID: 0,
    addressProof: undefined,

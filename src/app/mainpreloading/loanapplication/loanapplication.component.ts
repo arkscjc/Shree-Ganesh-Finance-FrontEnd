@@ -141,8 +141,8 @@ localAddress:this._formBuilder.group({
 	 paymentStatus:this._formBuilder.control(''),
 	amountPaidDate:this._formBuilder.control(''),
   }),
-        ledgerDetails:this._formBuilder.group({
-          //customerledger: [],
+        ledgerDetails:this._formBuilder.group([{
+          
           ledgerId:this._formBuilder.control(0),
 ledgerCreatedDate:this._formBuilder.control(''),
 totalLoanAmount:this._formBuilder.control(0),
@@ -158,9 +158,9 @@ previousEmitStatus:this._formBuilder.control(''),
 currentMonthEmiStatus:this._formBuilder.control(''),
 loanEndDate:this._formBuilder.control(''),
 loanStatus:this._formBuilder.control(''),
-        }),
+        }]),
         SanctionLetterDetails:this._formBuilder.group({
-          customerSanctionLetter:this._formBuilder.control(''),
+         
           sanctionId:this._formBuilder.control(0),
           sanctionDate:this._formBuilder.control(''),
         applicantName:this._formBuilder.control(''),
@@ -174,7 +174,7 @@ loanStatus:this._formBuilder.control(''),
          sactionLetter:this._formBuilder.control(''),
         }),
         VehicleInformationDetails:this._formBuilder.group({
-          //customerVehicleInformation: this._formBuilder.control(''),
+          
         customerVehicleId:this._formBuilder.control(0),
 	      customerVehicleModel:this._formBuilder.control(''),
 	      customerVehicleChasisNo:this._formBuilder.control(''),
@@ -234,7 +234,7 @@ onselectfile9(event){
                   }
 
 save(){
-
+  alert("enter save")
 this.cs.customerdetails.customerId=this.mainform.get("personalDetails").get("customerId").value;
 this.cs.customerdetails.customerFirstName=this.mainform.get("personalDetails").get("customerFirstName").value;
 this.cs.customerdetails.customerMiddleName=this.mainform.get("personalDetails").get("customerMiddleName").value;
@@ -266,11 +266,11 @@ this.cs.customerdetails.customerDealer.dealerBankDetails.dealerBankId=this.mainf
 
 this.cs.customerdetails.customerloandisbursement.agreementId=this.mainform.get("loandisbursementDetails").get("agreementId").value;
 
-// this.cs.customerdetails.customerledger=this.mainform.get("ledgerDetails").value;
-// this.cs.customerdetails.customerledger.ledgerId=this.mainform.get("ledgerDetails").get("ledgerId").value;
+//this.cs.customerdetails.customerledger=this.mainform.get("ledgerDetails").value;
+//this.cs.customerdetails.customerledger=this.mainform.get("ledgerDetails").get("ledgerId").value;
 
-// this.cs.customerdetails.customerSanctionLetter=this.mainform.get("SanctionLetterDetails").value;
-// this.cs.customerdetails.customerSanctionLetter.sanctionId=this.mainform.get("SanctionLetterDetails").get("sanctionId").value;
+this.cs.customerdetails.customerSanctionLetter=this.mainform.get("SanctionLetterDetails").value;
+this.cs.customerdetails.customerSanctionLetter.sanctionId=this.mainform.get("SanctionLetterDetails").get("sanctionId").value;
 
 this.cs.customerdetails.customerVehicleInformation=this.mainform.get("VehicleInformationDetails").value;
 this.cs.customerdetails.customerVehicleInformation.customerVehicleId=this.mainform.get("VehicleInformationDetails").get("customerVehicleId").value;
@@ -281,7 +281,7 @@ this.cs.customerdetails.customerBankDetails.customerBankId=this.mainform.get("cu
 let data=new FormData();
 let customerDetails=JSON.stringify(this.cs.customerdetails);
 alert(this.cs.customerdetails.customerFirstName)
-alert("enter save")
+
 
 data.append("customerDetails",customerDetails);
 data.append("addressProof",this.cs.customerAllDocuments.addressProof);
