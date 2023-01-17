@@ -23,6 +23,8 @@ import { EMIcalculatorComponent } from './emicalculator/emicalculator.component'
 import {MatStepperModule} from '@angular/material/stepper';
 import { LoanapplicationComponent } from './loanapplication/loanapplication.component';
 import { Ng5SliderModule } from 'ng5-slider';
+import { BrowserModule } from '@angular/platform-browser';
+import { IvyCarouselModule } from "angular-responsive-carousel";
 
 
 
@@ -43,7 +45,7 @@ import { Ng5SliderModule } from 'ng5-slider';
    
   ],
   imports: [
-    CommonModule,ReactiveFormsModule, Ng5SliderModule, FormsModule,
+    CommonModule,ReactiveFormsModule, Ng5SliderModule, FormsModule, BrowserModule, IvyCarouselModule,
     MainpreloadingRoutingModule,OperationalexcecutiveModule,RelationalexcecutiveModule,
     CreditmanagerModule,AccountheadModule,ReactiveFormsModule,AccountheadRoutingModule,
     CreditmanagerRoutingModule,OperationalexcecutiveRoutingModule,RelationalexcecutiveRoutingModule,MatStepperModule,
