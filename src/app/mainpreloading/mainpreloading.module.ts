@@ -18,10 +18,13 @@ import { AccountheadRoutingModule } from './dashboardcomp/accounthead/accounthea
 import { CreditmanagerRoutingModule } from './dashboardcomp/creditmanager/creditmanager-routing.module';
 import { OperationalexcecutiveRoutingModule } from './dashboardcomp/operationalexcecutive/operationalexcecutive-routing.module';
 import { RelationalexcecutiveRoutingModule } from './dashboardcomp/relationalexcecutive/relationalexcecutive-routing.module';
-import { EMIcalculatorComponent } from './emicalculator/emicalculator.component';
+//import { EMIcalculatorComponent } from './emicalculator/emicalculator.component';
 
 import {MatStepperModule} from '@angular/material/stepper';
 import { LoanapplicationComponent } from './loanapplication/loanapplication.component';
+
+import { BrowserModule } from '@angular/platform-browser';
+
 
 
 
@@ -34,7 +37,7 @@ import { LoanapplicationComponent } from './loanapplication/loanapplication.comp
     RegistercompComponent,
     FooterComponent,
     LoginComponent,
-    EMIcalculatorComponent,
+    //EMIcalculatorComponent,
     LoanapplicationComponent,
 
    
@@ -42,10 +45,22 @@ import { LoanapplicationComponent } from './loanapplication/loanapplication.comp
    
   ],
   imports: [
-    CommonModule,ReactiveFormsModule,FormsModule,
-    MainpreloadingRoutingModule,OperationalexcecutiveModule,RelationalexcecutiveModule,
-    CreditmanagerModule,AccountheadModule,ReactiveFormsModule,AccountheadRoutingModule,
-    CreditmanagerRoutingModule,OperationalexcecutiveRoutingModule,RelationalexcecutiveRoutingModule,MatStepperModule,
+CommonModule,
+ReactiveFormsModule,
+
+ FormsModule, 
+ BrowserModule, 
+
+MainpreloadingRoutingModule,
+OperationalexcecutiveModule,
+RelationalexcecutiveModule,
+    CreditmanagerModule,
+    AccountheadModule,
+    AccountheadRoutingModule,
+    CreditmanagerRoutingModule,
+    OperationalexcecutiveRoutingModule,
+    RelationalexcecutiveRoutingModule,
+    MatStepperModule
    
   ],
   exports:[
@@ -55,9 +70,11 @@ import { LoanapplicationComponent } from './loanapplication/loanapplication.comp
     HomecompComponent,
     RegistercompComponent,
     FooterComponent,
-    EMIcalculatorComponent,
+   // EMIcalculatorComponent,
     LoginComponent,
     LoanapplicationComponent
+
+
   ]
 })
 export class MainpreloadingModule { }

@@ -5,6 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './homecomp.component.html',
   styleUrls: ['./homecomp.component.scss']
 })
-export class HomecompComponent {
-
+export class HomecompComponent 
+{
+  images = [
+    {path: 'https://source.unsplash.com/800x600/?nature'},
+    {path: 'https://source.unsplash.com/800x600/?car'},
+    {path: 'https://source.unsplash.com/800x600/?moto'},
+    {path: 'https://source.unsplash.com/800x600/?fantasy'},
+  ]
+  
 }
