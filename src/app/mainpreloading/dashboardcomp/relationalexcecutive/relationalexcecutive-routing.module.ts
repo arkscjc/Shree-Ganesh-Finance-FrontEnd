@@ -7,11 +7,13 @@ import { LoanfillupformComponent } from './loanfillupform/loanfillupform.compone
 
 
 import {MatStepperModule} from '@angular/material/stepper';
+import { LoanapplicationComponent } from '../../loanapplication/loanapplication.component';
 
 const routes: Routes = [
   {path:"enquiryform",component:EnquiryformComponent},
   {path:"cibilcheck",component:CibilcheckComponent},
   {path:"loanfillupform",component:LoanfillupformComponent}
+  
 ];
 
 @NgModule({

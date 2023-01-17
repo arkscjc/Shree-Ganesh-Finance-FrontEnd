@@ -13,7 +13,7 @@ import { OperationalexcecutiveModule } from './dashboardcomp/operationalexcecuti
 import { RelationalexcecutiveModule } from './dashboardcomp/relationalexcecutive/relationalexcecutive.module';
 import { CreditmanagerModule } from './dashboardcomp/creditmanager/creditmanager.module';
 import { AccountheadModule } from './dashboardcomp/accounthead/accounthead.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccountheadRoutingModule } from './dashboardcomp/accounthead/accounthead-routing.module';
 import { CreditmanagerRoutingModule } from './dashboardcomp/creditmanager/creditmanager-routing.module';
 import { OperationalexcecutiveRoutingModule } from './dashboardcomp/operationalexcecutive/operationalexcecutive-routing.module';
@@ -42,7 +42,7 @@ import { LoanapplicationComponent } from './loanapplication/loanapplication.comp
    
   ],
   imports: [
-    CommonModule,ReactiveFormsModule,
+    CommonModule,ReactiveFormsModule,FormsModule,
     MainpreloadingRoutingModule,OperationalexcecutiveModule,RelationalexcecutiveModule,
     CreditmanagerModule,AccountheadModule,ReactiveFormsModule,AccountheadRoutingModule,
     CreditmanagerRoutingModule,OperationalexcecutiveRoutingModule,RelationalexcecutiveRoutingModule,MatStepperModule,
@@ -56,7 +56,8 @@ import { LoanapplicationComponent } from './loanapplication/loanapplication.comp
     RegistercompComponent,
     FooterComponent,
     EMIcalculatorComponent,
-    LoginComponent
+    LoginComponent,
+    LoanapplicationComponent
   ]
 })
 export class MainpreloadingModule { }

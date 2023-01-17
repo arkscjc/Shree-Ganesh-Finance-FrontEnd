@@ -1,48 +1,117 @@
-<h1 style="text-align: center; color:rgb(16, 225, 36)">LoanApplication form</h1>
-<mat-stepper orientation="horizontal">
-    <mat-step>
-      <ng-template matStepLabel>Persional Details</ng-template>
-      <ng-template matStepContent>
-        <p>This content was rendered lazily</p>
-        <button mat-button matStepperNext>Next</button>
-      </ng-template>
+CCC
+
+<form  [formGroup]="mainform" (ngSubmit)="save()">
+<mat-horizontal-stepper >
+    
+<mat-step [stepControl]="mainform.controls['personalDetails']">
+<ng-template matStepLabel>
+Personal Details
+</ng-template>
+<div formGroupName="personalDetails">
+    
+    customerFirstName:
+    <input type="text" formControlName="customerFirstName" placeholder="customerFirstName"><br><br>
+    customerMiddleName:
+    <input type="text" formControlName="customerMiddleName" placeholder="customerMiddleName"><br><br>
+    customerLastName:
+    <input type="text" formControlName="customerLastName" placeholder="customerLastName"><br><br>
+    customerMobileNumber:
+    <input type="number" formControlName="customerMobileNumber" placeholder="customerMobileNumber"><br><br>
+    customerAdditionalMobileNumber:
+    <input type="number" formControlName="customerAdditionalMobileNumber" placeholder="customerAdditionalMobileNumber"><br><br>
+    customerPanCard:
+    <input type="text" formControlName="customerPanCard" placeholder="customerPanCard"><br><br>
+    customerAdhaarCard:
+    <input type="text" formControlName="customerAdhaarCard" placeholder="customerAdhaarCard"><br><br>
+    customerDateOfBirth:
+    <input type="text" formControlName="customerDateOfBirth" placeholder="customerDateOfBirth"><br><br>
+    customerEmail:
+    <input type="text" formControlName="customerEmail" placeholder="customerEmail"><br><br>
+    customerGender:
+    <input type="text" formControlName="customerGender" placeholder="customerGender"><br><br>
+    customerQualification:
+    <input type="text" formControlName="customerQualification" placeholder="customerQualification"><br><br>
+    <div>
+        <button mat-button matStepperNext type="button">next</button>
+    </div>
+
+</div>
+
+</mat-step>
+
+     <mat-step formGroupName="addressDetails"[stepControl]="mainform.controls['personalDetails']">
+        <div>
+           
+            <div>
+                <button mat-button matStepperPrevious type="button">previous</button>
+                <button mat-button matStepperNext type="button">next</button>
+            </div>
+        
+        </div>
+    </mat-step> -->
+    <mat-step formGroupName="professionDetails"[stepControl]="mainform.controls['professionDetails']">
+        <div>
+            
+           
+            <div>
+                <button mat-button matStepperPrevious type="button">previous</button>
+                <button mat-button matStepperNext type="button">next</button>
+            </div>
+        
+        </div>
+    </mat-step>
+
+     <mat-step formGroupName="alldocumentsDetails"[stepControl]="mainform.controls['alldocumentsDetails']">
+        <div>
+            
+       
+       addressProof: <input type="file" (change)="onselectfile1($event)">
+       addharCard:<input type="file" (change)="onselectfile2($event)">
+       bankPassbook:<input type="file" (change)="onselectfile3($event)">
+       drivingLicense:<input type="file" (change)="onselectfile4($event)">
+      
+       incomeProof:<input type="file" (change)="onselectfile5($event)">
+       panCard:<input type="file" (change)="onselectfile6($event)">
+       photo:<input type="file" (change)="onselectfile7($event)">
+       signature:<input type="file" (change)="onselectfile8($event)">
+       thumb:<input type="file" (change)="onselectfile9($event)">
+      
+      
+           
+            
+        </div>
+        <div>
+            <button mat-raised-button color="primary" matStepperPrevious type="button">Back</button> |
+            <input type="submit" mat-raised-button color="accent" value="Submit">
+        </div>
     </mat-step>
     
-    <mat-step>
-      <ng-template matStepLabel>Documents</ng-template>
-      <p>This content was rendered eagerly</p>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </mat-step>
-    <mat-step>
-        <ng-template matStepLabel>Profession</ng-template>
-        <ng-template matStepContent>
-          <p>This content was rendered lazily</p>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </ng-template>
-      </mat-step>
-      <mat-step>
-        <ng-template matStepLabel>Dealer</ng-template>
-        <ng-template matStepContent>
-          <p>This content was also rendered lazily</p>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </ng-template>
-      </mat-step>
-      <mat-step>
-        <ng-template matStepLabel>Loan Disbursement</ng-template>
-        <p>This content was rendered eagerly</p>
-        <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+    
+
+    
+   
+ 
+</mat-horizontal-stepper>
+</form >
+    <!-- <mat-step [stepControl]="dealerDetails">
+        <form  [formGroup]="dealerDetails">
+           
+            <div>
+                <button mat-button matStepperPrevious>previous</button>
+                <button mat-button matStepperNext>next</button>
+            </div>
         
-      </mat-step>
-      <mat-step>
-        <ng-template matStepLabel>Sanction Letter</ng-template>
-        <p>This content was rendered eagerly</p>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Submit</button>
-      </mat-step>
-  
-    </mat-stepper>
-  
+        </form>
+</mat-step>
+<mat-step [stepControl]="dealerDetails">
+    <form  [formGroup]="dealerDetails">
+       
+        <div>
+            <button mat-button matStepperPrevious>previous</button>
+            <button mat-button (click)="save()">Submitt</button>
+        </div>
+    
+    </form> --> -->
+<!-- </mat-step> --> -->
+
+

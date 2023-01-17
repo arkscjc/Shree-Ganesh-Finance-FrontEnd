@@ -1,17 +1,17 @@
 export class Enquiry 
 {
     enquiryId: number;
-    enquiryFirstName : String;
-    enquiryMiddleName : String;
-    enquiryLastName : String;
+    enquiryFirstName : string;
+    enquiryMiddleName : string;
+    enquiryLastName : string;
     enquiryMobileNumber : number;
-    enquiryPanCard : String;
+    enquiryPanCard : string;
     enquiryAdhaarCard : any;
-    enquiryAddress : String;
-    enquiryDateOfBirth : String;
-    enquiryEmail : String;
-    enquiryGender : String;
+    enquiryAddress : string;
+    enquiryDateOfBirth : string;
+    enquiryEmail : string;
+    enquiryGender : string;
     enquiryCibilScore : number;
-    enquiryStatus:String
+    enquiryStatus:string
     
 }

@@ -26,6 +26,7 @@ const routes: Routes =
                     {path:"about",component:AboutcompComponent},
                     {path:"emical",component:EMIcalculatorComponent},
                     {path:"loanapplication",component:LoanapplicationComponent}
+                    
 
                     ]
   },
