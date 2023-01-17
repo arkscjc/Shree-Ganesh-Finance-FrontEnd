@@ -1,84 +1,107 @@
 blockquote {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 40px;
-    margin-inline-end: 40px;
-  }
-  blockquote {
-    margin: 0 0 1rem;
-  }
-  .left-title {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+.left-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: gray;
+}
+
+.result {
+  font-size: 16px;
+  font-weight: 600;
+  color: darkgreen;
+}
+
+h5,
+h6 {
+  color: gray;
+}
+
+.active {
+  background-color: lightgray;
+}
+
+h1 {
+  font-size: 35px;
+  color: gray;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
     font-size: 15px;
-    font-weight: 500;
     color: gray;
   }
-  .result {
-    font-size: 16px;
-    font-weight: 600;
-  }
-  h5,
-  h6 {
-    color: gray;
-  }
-  .active {
-    background-color: lightgray;
-  }
-  
+}
+
+@media only screen and (min-width: 992px) {
   h1 {
     font-size: 35px;
-    color: gray;
+    margin-bottom: -20px;
   }
-  @media only screen and (max-width: 768px) {
-    h1 {
-      font-size: 15px;
-      color: gray;
-    }
-  }
-  @media only screen and (min-width: 992px) {
-    h1 {
-      font-size: 35px;
-      margin-bottom: -20px;
-    }
-  }
-
-
-
-
- .left-title{
-    font-size: 15px;
-    font-weight: 500;
-    color: black;
-}
-.result{
-    font-size: 16px;
-    font-weight: 600;
-}
-h5,h6{
-    color: red;
-}
-.active{
-    background-color: red;
 }
 
 
-h1{
-    font-size: 35px;
-    color: gray;
+
+
+.left-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
 }
+
+.result {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h5,
+h6 {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+
+.active {
+  background-color: red;
+}
+
+
+h1 {
+  font-size: 35px;
+  color: gray;
+}
+
 @media only screen and (max-width: 768px) {
-    h1{
-        font-size: 15px;
-        color: gray;
-    }
-   
+  h1 {
+    font-size: 15px;
+    color: gray;
+  }
+
 }
+
 @media only screen and (min-width: 992px) {
-    h1{
-        font-size: 35px;
-        margin-bottom: -20px;   
-    }
+  h1 {
+    font-size: 35px;
+    margin-bottom: -20px;
+  }
 }
 
+.divbox {
+  background-color: rgb(250, 207, 207);
+padding-top: 10px;
+}
+.divouterbox{
 
-  
+  outline: 3px solid rgb(20, 0, 109);
+  border-radius: 10px;
+
+}
