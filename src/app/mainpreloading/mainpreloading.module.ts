@@ -18,13 +18,13 @@ import { AccountheadRoutingModule } from './dashboardcomp/accounthead/accounthea
 import { CreditmanagerRoutingModule } from './dashboardcomp/creditmanager/creditmanager-routing.module';
 import { OperationalexcecutiveRoutingModule } from './dashboardcomp/operationalexcecutive/operationalexcecutive-routing.module';
 import { RelationalexcecutiveRoutingModule } from './dashboardcomp/relationalexcecutive/relationalexcecutive-routing.module';
-import { EMIcalculatorComponent } from './emicalculator/emicalculator.component';
+//import { EMIcalculatorComponent } from './emicalculator/emicalculator.component';
 
 import {MatStepperModule} from '@angular/material/stepper';
 import { LoanapplicationComponent } from './loanapplication/loanapplication.component';
-import { Ng5SliderModule } from 'ng5-slider';
+
 import { BrowserModule } from '@angular/platform-browser';
-import { IvyCarouselModule } from "angular-responsive-carousel";
+
 
 
 
@@ -37,7 +37,7 @@ import { IvyCarouselModule } from "angular-responsive-carousel";
     RegistercompComponent,
     FooterComponent,
     LoginComponent,
-    EMIcalculatorComponent,
+    //EMIcalculatorComponent,
     LoanapplicationComponent,
 
    
@@ -45,10 +45,22 @@ import { IvyCarouselModule } from "angular-responsive-carousel";
    
   ],
   imports: [
-    CommonModule,ReactiveFormsModule, Ng5SliderModule, FormsModule, BrowserModule, IvyCarouselModule,
-    MainpreloadingRoutingModule,OperationalexcecutiveModule,RelationalexcecutiveModule,
-    CreditmanagerModule,AccountheadModule,ReactiveFormsModule,AccountheadRoutingModule,
-    CreditmanagerRoutingModule,OperationalexcecutiveRoutingModule,RelationalexcecutiveRoutingModule,MatStepperModule,
+CommonModule,
+ReactiveFormsModule,
+
+ FormsModule, 
+ BrowserModule, 
+
+MainpreloadingRoutingModule,
+OperationalexcecutiveModule,
+RelationalexcecutiveModule,
+    CreditmanagerModule,
+    AccountheadModule,
+    AccountheadRoutingModule,
+    CreditmanagerRoutingModule,
+    OperationalexcecutiveRoutingModule,
+    RelationalexcecutiveRoutingModule,
+    MatStepperModule
    
   ],
   exports:[
@@ -58,8 +70,11 @@ import { IvyCarouselModule } from "angular-responsive-carousel";
     HomecompComponent,
     RegistercompComponent,
     FooterComponent,
-    EMIcalculatorComponent,
+   // EMIcalculatorComponent,
     LoginComponent,
+    LoanapplicationComponent
+
+
   ]
 })
 export class MainpreloadingModule { }

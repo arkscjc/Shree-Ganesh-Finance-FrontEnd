@@ -1,1 +1,29 @@
-<p>pendingverification works!</p>
+<p>loanfillupform works!</p>
+<div class="alert alert-secondary text-center"><h1>Customer Database</h1></div>
+<div class="container">
+<table class="table table-striped">
+<tbody>
+<th>customerId</th>
+<th>customerFirstName</th>
+<th>customerLastName</th>
+<th>customerMobileNumber</th>
+<th>professionId</th>
+<th>STATUS</th>
+
+
+<tr *ngFor="let d of customerdata">
+    <td>{{d.customerId}}</td>
+    <td>{{d.customerFirstName}}</td>
+    <td>{{d.customerLastName}}</td>
+    <td>{{d.customerMobileNumber}}</td>
+    <td>{{d.customerProfession.professionId}}</td>
+    <button (click)="singlecustomeralldata(d)">Show Data</button>
+    <td >
+
+   </td>
+    
+  
+</tr>
+</tbody>
+</table>
+</div>
