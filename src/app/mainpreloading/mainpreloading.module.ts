@@ -18,12 +18,15 @@ import { AccountheadRoutingModule } from './dashboardcomp/accounthead/accounthea
 import { CreditmanagerRoutingModule } from './dashboardcomp/creditmanager/creditmanager-routing.module';
 import { OperationalexcecutiveRoutingModule } from './dashboardcomp/operationalexcecutive/operationalexcecutive-routing.module';
 import { RelationalexcecutiveRoutingModule } from './dashboardcomp/relationalexcecutive/relationalexcecutive-routing.module';
-//import { EMIcalculatorComponent } from './emicalculator/emicalculator.component';
+import { EMIcalculatorComponent } from './emicalculator/emicalculator.component';
 
 import {MatStepperModule} from '@angular/material/stepper';
 import { LoanapplicationComponent } from './loanapplication/loanapplication.component';
 
 import { BrowserModule } from '@angular/platform-browser';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { Ng5SliderModule } from 'ng5-slider';
+
 
 
 
@@ -37,8 +40,8 @@ import { BrowserModule } from '@angular/platform-browser';
     RegistercompComponent,
     FooterComponent,
     LoginComponent,
-    //EMIcalculatorComponent,
-    LoanapplicationComponent,
+    EMIcalculatorComponent,
+ 
 
    
     
@@ -47,10 +50,10 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [
 CommonModule,
 ReactiveFormsModule,
-
- FormsModule, 
- BrowserModule, 
-
+IvyCarouselModule,
+Ng5SliderModule,
+FormsModule, 
+BrowserModule, 
 MainpreloadingRoutingModule,
 OperationalexcecutiveModule,
 RelationalexcecutiveModule,
@@ -70,9 +73,9 @@ RelationalexcecutiveModule,
     HomecompComponent,
     RegistercompComponent,
     FooterComponent,
-   // EMIcalculatorComponent,
+    EMIcalculatorComponent,
     LoginComponent,
-    LoanapplicationComponent
+ 
 
 
   ]

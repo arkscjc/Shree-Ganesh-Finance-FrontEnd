@@ -9,21 +9,29 @@ import { LoanfillupformComponent } from './loanfillupform/loanfillupform.compone
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
+import { LoanapplicationComponent } from '../../loanapplication/loanapplication.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatStepperModule} from '@angular/material/stepper';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
   declarations: [
     EnquiryformComponent,
     CibilcheckComponent,
-    LoanfillupformComponent
+    LoanfillupformComponent,
+    LoanapplicationComponent
   ],
   imports: [
     CommonModule,
     RelationalexcecutiveRoutingModule,
     MatFormFieldModule,ReactiveFormsModule,
-    MatButtonModule,MatIconModule
+    MatButtonModule,MatIconModule,MatStepperModule,MatInputModule
+  ],
+  exports:[
+    LoanapplicationComponent
   ]
 })
 export class RelationalexcecutiveModule { }
