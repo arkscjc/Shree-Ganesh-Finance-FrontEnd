@@ -1,0 +1,323 @@
+
+
+
+    <mat-vertical-stepper >    
+      <mat-step >
+              <div >
+                  <ng-template matStepLabel> Personal Details </ng-template>
+                  
+                  <mat-form-field appearance="fill">
+                      <mat-label>First Name</mat-label>
+                      <input matInput value="{{customersingledata.customerFirstName}}" readonly >
+                    </mat-form-field>
+  
+                    <mat-form-field appearance="fill">
+                      <mat-label>Middle Name</mat-label>
+                      <input matInput placeholder="Middle name" >
+                    </mat-form-field>
+          
+                    <mat-form-field appearance="fill">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Last name"  >  
+                      </mat-form-field>
+          
+          
+                      <br>
+                      <mat-form-field appearance="fill">
+                        <mat-label>PanCard Number</mat-label>
+                        <input matInput placeholder="PanCard Number" >
+                      </mat-form-field>
+          
+                      
+                      <mat-form-field appearance="fill">
+                        <mat-label>AdhaarCard Number</mat-label>
+                        <input matInput placeholder="AdhaarCard Number"  >
+                      </mat-form-field>
+          
+                      <br>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Mobile Number</mat-label>
+                        <input matInput placeholder="Mobile Number"  >
+                      </mat-form-field>
+          
+                      <mat-form-field appearance="fill">
+                          <mat-label>Additional Mobile Number</mat-label>
+                          <input matInput placeholder="Addirional Mobile Number"  >
+                        </mat-form-field>
+  
+                      <mat-form-field appearance="fill">
+                        <mat-label>Email id</mat-label>
+                        <input matInput placeholder="Email Id" >
+                      </mat-form-field>
+          
+                      <br>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Date Of Birth</mat-label>
+                        <input matInput placeholder="Date Of Birth" >
+                      </mat-form-field>
+          
+                      
+                      <mat-form-field appearance="fill">
+                        <mat-label>Gender</mat-label>
+                        <input matInput placeholder="Gender"  >
+                      </mat-form-field>
+  
+                      <mat-form-field appearance="fill">
+                          <mat-label>Customer Qualifiacton</mat-label>
+                          <input matInput placeholder="Qualifiacton"  >
+                        </mat-form-field>
+          
+                      <br>
+  
+                  
+                      <div>
+                          <button mat-raised-button color="primary" matStepperNext>Next</button>
+                        </div>
+  
+                  </div>
+          </mat-step>
+  
+          <mat-step >
+              <div >
+                  <ng-template matStepLabel> Permanent Address Details </ng-template>
+  
+                  <mat-form-field appearance="fill">
+                      <mat-label>Area Name</mat-label>
+                      <input matInput placeholder="Area Name"  >
+                    </mat-form-field>
+        
+                    
+                    <mat-form-field appearance="fill">
+                      <mat-label>City Name</mat-label>
+                      <input matInput placeholder="City name"  >
+                    </mat-form-field>
+        
+                    
+                    <mat-form-field appearance="fill">
+                      <mat-label>District</mat-label>
+                      <input matInput placeholder="District"  >
+                    </mat-form-field>
+        
+                    <br>
+                    <mat-form-field appearance="fill">
+                      <mat-label>State</mat-label>
+                      <input matInput placeholder="State"  >
+                    </mat-form-field>
+        
+                    
+                    <mat-form-field appearance="fill">
+                      <mat-label>Pincode</mat-label>
+                      <input matInput placeholder="Pincode"  >
+                    </mat-form-field>
+        
+                    
+                    <mat-form-field appearance="fill">
+                      <mat-label>House Number</mat-label>
+                      <input matInput placeholder="House Number"  >
+                    </mat-form-field>
+        
+                    <br>
+                    <mat-form-field appearance="fill">
+                      <mat-label>Street Name</mat-label>
+                      <input matInput placeholder="Street Name"  >
+                    </mat-form-field>
+              
+                  <div>
+                      <button mat-raised-button color="primary" matStepperPrevious>Back</button> | 
+                       <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+              </div>
+          </mat-step> 
+  
+          <mat-step >
+              <div >
+                  <ng-template matStepLabel> Local Address Details </ng-template>
+  
+                  <mat-form-field appearance="fill">
+                      <mat-label>Area Name</mat-label>
+                      <input matInput placeholder="Area Name"  >
+                    </mat-form-field>
+        
+                    
+                    <mat-form-field appearance="fill">
+                      <mat-label>City Name</mat-label>
+                      <input matInput placeholder="City name"  >
+                    </mat-form-field>
+        
+                    
+                    <mat-form-field appearance="fill">
+                      <mat-label>District</mat-label>
+                      <input matInput placeholder="District"  >
+                    </mat-form-field>
+        
+                    <br>
+                    <mat-form-field appearance="fill">
+                      <mat-label>State</mat-label>
+                      <input matInput placeholder="State" >
+                    </mat-form-field>
+        
+                    
+                    <mat-form-field appearance="fill">
+                      <mat-label>Pincode</mat-label>
+                      <input matInput placeholder="Pincode"  >
+                    </mat-form-field>
+        
+                    
+                    <mat-form-field appearance="fill">
+                      <mat-label>House Number</mat-label>
+                      <input matInput placeholder="House Number"  >
+                    </mat-form-field>
+        
+                    <br>
+                    <mat-form-field appearance="fill">
+                      <mat-label>Street Name</mat-label>
+                      <input matInput placeholder="Street Name" >
+                    </mat-form-field>
+              
+                  <div>
+                      <button mat-raised-button color="primary" matStepperPrevious>Back</button> | 
+                       <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+              </div>
+          </mat-step> 
+  
+          <mat-step >
+              <div >
+                  <ng-template matStepLabel> Profession Details </ng-template>
+      
+                  <mat-form-field appearance="fill">
+                      <mat-label>professionType</mat-label>
+                      <input matInput  placeholder="professionType"
+                             required>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field appearance="fill">
+                        <mat-label>professionMonthlyIncome</mat-label>
+                        <input matInput  placeholder="professionMonthlyIncome"
+                               required>
+                      </mat-form-field>
+                      <br>
+                      <mat-form-field appearance="fill">
+                        <mat-label>professionDesignation</mat-label>
+                        <input matInput  placeholder="professionDesignation"
+                               required>
+                      </mat-form-field>
+                      <br>
+                 
+                  <div>
+                  <button mat-raised-button color="primary" matStepperPrevious>Back</button> | 
+                   <button mat-raised-button color="primary" matStepperNext>Next</button>
+                </div>
+              </div>
+          </mat-step>
+      
+  
+          <mat-step >
+              <div >
+                  <ng-template matStepLabel> Dealer Details </ng-template>
+  
+                  <mat-form-field appearance="fill">
+                      <mat-label>Dealer Name</mat-label>
+                      <input matInput placeholder="Dealer Name"  >
+                    </mat-form-field>
+                    <br>
+      
+                    <mat-form-field appearance="fill">
+                      <mat-label>Dealer Address</mat-label>
+                      <input matInput placeholder="Dealer Address"  >
+                    </mat-form-field>
+                    <br>
+                  <div>
+  
+                      <button mat-raised-button color="primary" matStepperPrevious>Back</button> | 
+                       <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+              </div>
+          </mat-step>
+  
+          <mat-step >
+              <div >
+                  <ng-template matStepLabel> Dealer Details </ng-template>
+  
+                  <mat-form-field appearance="fill">
+                      <mat-label>Dealer Bank Account Number</mat-label>
+                      <input matInput placeholder="Dealer Bank Account Number"  >
+                    </mat-form-field>
+                    <br>
+  
+                    <mat-form-field appearance="fill">
+                      <mat-label>Dealer Bank Name</mat-label>
+                      <input matInput placeholder="Dealer Bank Name"  >
+                    </mat-form-field>
+                    <br>
+  
+                    <mat-form-field appearance="fill">
+                      <mat-label>Dealer Bank Branch name</mat-label>
+                      <input matInput placeholder="Dealer Bank Branch name"  >
+                    </mat-form-field>
+                    <br>
+  
+                    <mat-form-field appearance="fill">
+                      <mat-label>Dealer Bank IFSc Code</mat-label>
+                      <input matInput placeholder="Dealer Bank IFSc Code"  >
+                    </mat-form-field>
+                    <br>
+  
+                  <div>
+                      <button mat-raised-button color="primary" matStepperPrevious>Back</button> | 
+                       <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+              </div>
+          </mat-step>
+  
+      
+       <mat-step >
+          <div >
+              <ng-template matStepLabel> Document Details </ng-template> 
+
+              <div>
+                addressProof
+                <iframe [src]="''+customersingledata.customerAllDocuments.addharCard"></iframe><br> <br><br>
+     photo
+     <img [src]="'data:image/jpeg;base64,'+customersingledata.customerAllDocuments.photo" >
+     
+
+              </div>
+         
+        
+  
+         
+      
+        
+              
+          </div>
+          <div>
+                    <button mat-raised-button color="primary" matStepperPrevious>Back</button> | 
+                    <button mat-raised-button color="accent" (click)="save(customersingledata.customerId,'ok')">verified</button>
+                  </div>
+      </mat-step>
+  </mat-vertical-stepper>
+
+      <!-- <mat-step [stepControl]="dealerDetails">
+          <form  [formGroup]="dealerDetails">
+             
+              <div>
+                  <button mat-button matStepperPrevious>previous</button>
+                  <button mat-button matStepperNext>next</button>
+              </div>
+          
+          </form>
+  </mat-step>
+  <mat-step [stepControl]="dealerDetails">
+      <form  [formGroup]="dealerDetails">
+         
+          <div>
+              <button mat-button matStepperPrevious>previous</button>
+              <button mat-button (click)="save()">Submitt</button>
+          </div>
+      
+      </form> --> 
+  <!-- </mat-step> --> 
+  
+  
+  

@@ -16,6 +16,7 @@ import { SanctionLetter } from '../models/sanction-letter';
   providedIn: 'root'
 })
 export class CommonserviceService {
+  
  enquiry:Enquiry={
    enquiryId: 0,
    enquiryFirstName: undefined,
@@ -112,6 +113,14 @@ export class CommonserviceService {
   customerLoanFormSubmit(data:any){
     alert('hi')
     return this.http.post("http://localhost:9090/customer/FillLoanApplicationForm",data)
+  }
+
+  getcustomerdata(){
+    return this.http.get("http://localhost:9090/customer/getAllCustomerFormData")
+
+  }
+  getcustomersibgledata(customerid: number) {
+    return this.http.get("http://localhost:9090/customer/getSingleDataByCustomerId/"+ customerid)
   }
 
 }

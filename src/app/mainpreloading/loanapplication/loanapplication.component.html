@@ -1,4 +1,4 @@
-CCC
+
 
 <form  [formGroup]="mainform" (ngSubmit)="save()">
 <mat-horizontal-stepper >
@@ -39,7 +39,7 @@ Personal Details
 
 </mat-step>
 
-     <mat-step formGroupName="addressDetails"[stepControl]="mainform.controls['personalDetails']">
+     <mat-step formGroupName="addressDetails"[stepControl]="mainform.controls['addressDetails']" >
         <div>
            
             <div>
