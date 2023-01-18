@@ -25,7 +25,7 @@ export class LoanfillupformComponent {
   {
     alert("loan application")
     this.cs.enquiry=Object.assign({},enquiry)
-    this.route.navigate(['/loanapplication'])
+    this.route.navigate(['dashboard/relationalexcecutive/loanapplication'])
   }
 
 }
