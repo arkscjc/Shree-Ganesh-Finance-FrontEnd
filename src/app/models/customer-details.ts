@@ -18,6 +18,7 @@ export class CustomerDetails {
    customerAdditionalMobileNumber:number
 	 customerPanCard:string
 	 customerAdhaarCard:number
+	 customerLoanTenureInMonth:number
 	 customerDateOfBirth:string
 	customerEmail:string
 	customerGender:string

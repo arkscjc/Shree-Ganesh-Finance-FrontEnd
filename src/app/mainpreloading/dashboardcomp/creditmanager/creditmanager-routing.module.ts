@@ -8,10 +8,12 @@ import { VerifydetailsComponent } from './verifydetails/verifydetails.component'
 
 const routes: Routes = [
   {path:"verifydetails",component:VerifydetailsComponent},
-  {path:"rateofinterest",component:RateofinterestComponent},
   {path:"notificationsendtooe",component:NotificationsendtooeComponent},
   {path:"generatesanctionletter",component:GeneratesanctionletterComponent},
-  {path:"ammountofloan",component:AmmountofloanComponent}
+  {path:"ammountofloan",component:AmmountofloanComponent},
+  {path:"rateofinterest",component:RateofinterestComponent},
+  // for data transfer
+  {path:"rateofinterest/:data",component:RateofinterestComponent},
 ];
 
 @NgModule({

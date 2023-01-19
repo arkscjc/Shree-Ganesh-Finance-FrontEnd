@@ -14,14 +14,7 @@ export class PendingverificationComponent {
   constructor(private formbuilder:FormBuilder, private cs:CommonserviceService,private route:Router){}
   customerdata:CustomerDetails[]
 
-  check(){
-this.customerdata.forEach(data=>{
- // alert(data.customerProfession.professionId);
- alert(data.customerAddress.customerAddressId)
-  
-})
-
-  }
+ 
 
   ngOnInit():void
   {

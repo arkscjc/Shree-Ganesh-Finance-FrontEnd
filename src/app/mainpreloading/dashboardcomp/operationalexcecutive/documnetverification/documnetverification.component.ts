@@ -26,8 +26,10 @@ export class DocumnetverificationComponent {
 })
   }
 
-  save(id:number, status:string){
-   alert(status+id)
+  save(id:number, customerStatus:string){
+   alert(customerStatus+id)
+    
+   this.cs.customerdocumentverificationstatus(id,customerStatus).subscribe();
    
   }
 

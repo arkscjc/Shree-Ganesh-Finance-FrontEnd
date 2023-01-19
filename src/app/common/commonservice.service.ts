@@ -48,6 +48,7 @@ export class CommonserviceService {
    customerEmail: '',
    customerGender: '',
    customerQualification: undefined,
+   customerLoanTenureInMonth: 0,
    customerCibilScore: 0,
    customerStatus: '',
    customerAllDocuments: new AllDocuments,
@@ -58,25 +59,26 @@ export class CommonserviceService {
    customerVehicleInformation: new CustomerVehicleInformation,
    customerBankDetails: new CustomerBankDetails,
    customerledger: [
-    {
-      ledgerId: 0,
-      ledgerCreatedDate: '',
-      totalLoanAmount: 0,
-      payableAmountwithInterest: 0,
-      tenure: 0,
-      monthlyEMI: 0,
-      amountPaidtillDate: 0,
-      remainingAmount: 0,
-      nextEmiDatestart: '',
-      nextEmiDateEnd: '',
-      defaulterCount: 0,
-      previousEmitStatus: '',
-      currentMonthEmiStatus: '',
-      loanEndDate: '',
-      loanStatus: ''
-    }
+     {
+       ledgerId: 0,
+       ledgerCreatedDate: '',
+       totalLoanAmount: 0,
+       payableAmountwithInterest: 0,
+       tenure: 0,
+       monthlyEMI: 0,
+       amountPaidtillDate: 0,
+       remainingAmount: 0,
+       nextEmiDatestart: '',
+       nextEmiDateEnd: '',
+       defaulterCount: 0,
+       previousEmitStatus: '',
+       currentMonthEmiStatus: '',
+       loanEndDate: '',
+       loanStatus: ''
+     }
    ],
    customerSanctionLetter: new SanctionLetter
+  
  }
 
  
@@ -124,6 +126,14 @@ export class CommonserviceService {
   }
   getcustomersibgledata(customerid: number) {
     return this.http.get("http://localhost:9090/customer/getSingleDataByCustomerId/"+ customerid)
+  }
+  url:string
+  customerdocumentverificationstatus(customerid: number, customerStatus:string){
+    alert(customerid)
+    this.url="http://localhost:9090/customer/customerApplicationStatus/"+customerid+"/"+customerStatus
+    alert(this.url)
+
+    return this.http.put(this.url,null)
   }
 
   getDocVerifiedCustomer()
