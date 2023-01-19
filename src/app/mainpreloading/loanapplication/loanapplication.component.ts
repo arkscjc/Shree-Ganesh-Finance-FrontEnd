@@ -31,7 +31,7 @@ export class LoanapplicationComponent {
   isLinear = false;
 
   constructor(private _formBuilder: FormBuilder, private cs:CommonserviceService) {}
- //mainform:FormGroup
+
 
 
 ngOnInit() {
@@ -55,7 +55,8 @@ mainform=this._formBuilder.group({
        customerGender:this._formBuilder.control (this.cs.enquiry.enquiryGender),
        customerQualification: this._formBuilder.control('',Validators.required),
        customerCibilScore:this._formBuilder.control (this.cs.enquiry.enquiryCibilScore),
-       customerStatus:this._formBuilder.control (this.cs.enquiry.enquiryStatus)
+       customerStatus:this._formBuilder.control (this.cs.enquiry.enquiryStatus),
+       customerLoanTenureInMonth:this._formBuilder.control(0)
       }),
       addressDetails:this._formBuilder.group({
         
@@ -120,6 +121,7 @@ localAddress:this._formBuilder.group({
         dealerId:this._formBuilder.control(0),
 	     dealerName:this._formBuilder.control(''),
 	     dealerAddress:this._formBuilder.control(''),
+       dealerEmail:this._formBuilder.control('')
        
       
         }),
@@ -164,7 +166,7 @@ loanStatus:this._formBuilder.control(''),
           sanctionId:this._formBuilder.control(0),
           sanctionDate:this._formBuilder.control(''),
         applicantName:this._formBuilder.control(''),
-          contactDetails:this._formBuilder.control(''),
+          contactDetails:this._formBuilder.control(0),
           loanAmountSanctioned:this._formBuilder.control(0),
           rateOfInterest:this._formBuilder.control(0),
            loanTenure:this._formBuilder.control(0),
@@ -172,6 +174,7 @@ loanStatus:this._formBuilder.control(''),
           termsCondition:this._formBuilder.control(''),
          sactionStatus:this._formBuilder.control(''),
          sactionLetter:this._formBuilder.control(''),
+         totalLoanAmountWithInterest:this._formBuilder.control(0),
         }),
         VehicleInformationDetails:this._formBuilder.group({
           
@@ -193,16 +196,6 @@ loanStatus:this._formBuilder.control(''),
 
      
 
-
-// get personalDetailsForm()
-// {
-//   return this.mainform.get("personalDetails")as FormGroup;
-// }
-
-// get addressDetailsForm()
-// {
-//   return this.mainform.get("addressDetails")as FormGroup;
-// }
 onselectfile1(event){
   
   this.cs.customerAllDocuments.addressProof=event.target.files[0];
@@ -245,8 +238,11 @@ this.cs.customerdetails.customerPanCard=this.mainform.get("personalDetails").get
 this.cs.customerdetails.customerAdhaarCard=this.mainform.get("personalDetails").get("customerAdhaarCard").value;
 this.cs.customerdetails.customerDateOfBirth=this.mainform.get("personalDetails").get("customerDateOfBirth").value;
 this.cs.customerdetails.customerEmail=this.mainform.get("personalDetails").get("customerEmail").value;
+this.cs.customerdetails.customerGender=this.mainform.get("personalDetails").get("customerGender").value;
 this.cs.customerdetails.customerCibilScore=this.mainform.get("personalDetails").get("customerCibilScore").value;
 this.cs.customerdetails.customerStatus=this.mainform.get("personalDetails").get("customerStatus").value;
+this.cs.customerdetails.customerQualification=this.mainform.get("personalDetails").get("customerQualification").value;
+this.cs.customerdetails.customerLoanTenureInMonth=this.mainform.get("personalDetails").get("customerLoanTenureInMonth").value;
 
 this.cs.customerdetails.customerAddress.customerAddressId=this.mainform.get("addressDetails").get("customerAddressId").value;
 this.cs.customerdetails.customerAddress.localAddress=this.mainform.get("localAddress").value;
@@ -258,8 +254,12 @@ this.cs.customerdetails.customerAddress.permanentAddress.permanentAddressId=this
 this.cs.customerdetails.customerProfession=this.mainform.get("professionDetails").value;
 this.cs.customerdetails.customerProfession.professionId=this.mainform.get("professionDetails").get("professionId").value;
 
-
 this.cs.customerdetails.customerDealer.dealerId=this.mainform.get("dealerDetails").get("dealerId").value;
+this.cs.customerdetails.customerDealer.dealerName=this.mainform.get("dealerDetails").get("dealerName").value;
+this.cs.customerdetails.customerDealer.dealerAddress=this.mainform.get("dealerDetails").get("dealerAddress").value;
+this.cs.customerdetails.customerDealer.dealerEmail=this.mainform.get("dealerDetails").get("dealerEmail").value;
+
+
 
 this.cs.customerdetails.customerDealer.dealerBankDetails=this.mainform.get("dealerBankDetails").value;
 this.cs.customerdetails.customerDealer.dealerBankDetails.dealerBankId=this.mainform.get("dealerBankDetails").get("dealerBankId").value;

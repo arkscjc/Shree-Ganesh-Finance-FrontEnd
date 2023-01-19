@@ -2,12 +2,13 @@ export class SanctionLetter {
 
     
   sanctionId:number
-  sanctionDate:string
+  sanctionDate:any
   applicantName:string
-  contactDetails:string
+  contactDetails:number
   loanAmountSanctioned:number
   rateOfInterest:number
   loanTenure  :number
+  totalLoanAmountWithInterest:number
   monthlyEmiAmount:number
   termsCondition:string
   sactionStatus:string

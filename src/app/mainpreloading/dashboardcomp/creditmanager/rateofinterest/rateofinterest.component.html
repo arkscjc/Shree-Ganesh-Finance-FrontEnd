@@ -1,1 +1,149 @@
 <p>rateofinterest works!</p>
+
+
+<!-- <form  [formGroup]="SanctionLetterDetails" (ngSubmit)="sanctionletterSubmit(customersingledata)">
+    <div>
+       <h1>Registration</h1>
+       
+        
+         <input type="text"  value="{{customersingledata.customerFirstName}}"> <br><br>
+         <input type="number" formControlName="monthlyEmiAmount" placeholder="Enter EMI">
+      
+    
+   
+    <input type="submit" value="Save"  [disabled]= "!SanctionLetterDetails.valid">  
+   </div>   
+   </form> -->
+
+   <section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h4 class="mb-4 pb-2 pb-md-0 mb-md-5">Sanction Letter</h4>
+              
+              
+              <form [formGroup]="SanctionLetterDetails" (ngSubmit)="sanctionletterSubmit(customersingledata)">
+                  <div class="col-md-12 mb-4">
+
+                    <div class="form-outline">
+                        <label class="form-label" for="firstName">Applicant Name</label>
+                      <input type="text" id="firstName" class="form-control form-control-lg"  value="{{customersingledata.customerFirstName}} {{customersingledata.customerMiddleName}} {{customersingledata.customerLastName}}" readonly/>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-outline">
+                            <label class="form-label" for="firstName">contact Details</label>
+                            <input type="text" id="firstName" class="form-control form-control-lg" value="{{customersingledata.customerMobileNumber}}" readonly/>
+                          </div>
+                    </div>
+                    
+                      
+                      <div class="row">
+
+                      </div>
+                      <div class="form-outline">
+                        <label class="form-label" for="firstName">Applicant Monthaly Income</label>
+                        <input type="text" id="firstName" class="form-control form-control-lg" value="{{customersingledata.customerProfession.professionMonthlyIncome}}" readonly/>
+                      </div>
+                    
+                      <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                    <label class="form-label" for="firstName">Maximun Permisible loan amout</label>
+                                    <input type="text" id="firstName" class="form-control form-control-lg" value="{{maximumloanAmount}}" readonly/>
+                                </div>           
+                            </div>
+
+                            <div class="col-md-6 mb-4"> 
+                                <div class="form-outline">
+                                    <label class="form-label" for="firstName">Loan Amount Sanctioned</label>
+                                    <input type="text" id="firstName" class="form-control form-control-lg"  value="number" formControlName="loanAmountSanctioned" placeholder="Enter Amount"/>  
+                                </div>
+                            </div>
+                            
+                        </div>
+                      
+
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <label class="form-label" for="firstName">Applicant Pan Card</label>
+                                <input type="text" id="firstName" class="form-control form-control-lg"  value="{{customersingledata.customerPanCard}}" readonly/>
+                              </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <label class="form-label" for="firstName">Applicant Cibil Score </label>
+                                <input type="text" id="firstName" class="form-control form-control-lg" value="{{customersingledata.customerCibilScore}}" readonly/>  
+                              </div>
+                        </div>
+                      </div>
+
+                      <div class="form-outline">
+                        <label class="form-label" for="firstName">Rate Of Interest</label>
+                        <input type="text" id="firstName" class="form-control form-control-lg" value="number" formControlName="rateOfInterest" placeholder="Enter ROI"/>
+                      </div>                      
+
+                      <div class="form-outline">
+                        <label class="form-label" for="firstName">Loan Tenure in Mo</label>
+                        <input type="text" id="firstName" class="form-control form-control-lg" value="{{customersingledata.customerLoanTenureInMonth}}" readonly/>
+                        
+                      </div>
+  
+                  </div>
+                  <div>
+
+                  </div>
+                  <div class="row">
+
+                  </div>
+                  <div class="form-outline">
+                    <label class="form-label" for="firstName">Monthly Emi Amount</label>
+                    <input type="button" (click)="calculateEMI()" value="EMI CAL">
+                    <input type="number"  id="firstName" class="form-control form-control-lg" value="{{monthlyEmiAmount}}" readonly/>
+                    
+                  </div>
+                  <div class="row">
+
+                  </div>
+                  <div class="form-outline">
+                    <label class="form-label" for="firstName">Payable Amount with Interest</label>
+                    <input type="number" id="firstName" class="form-control form-control-lg" value="{{totalpaybleamount}}" readonly/>
+                  </div>
+                  <div class="row">
+
+                  </div>
+                  
+                  
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4 d-flex align-items-center">
+  
+                    <div class="form-outline datepicker w-100">
+                        <label for="birthdayDate" class="form-label">Sanction Date</label>
+                      <input type="date" class="form-control form-control-lg" id="birthdayDate" formControlName="sanctionDate" placeholder="enter sanctionDate"/>  
+                      
+                    </div>
+                    
+  
+                  </div>
+                  
+                  
+                </div>
+
+              
+  
+    
+                <div class="mt-4 pt-2">
+                  <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                </div>
+  
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

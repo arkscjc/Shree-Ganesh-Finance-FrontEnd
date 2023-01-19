@@ -7,6 +7,7 @@ import { AmmountofloanComponent } from './ammountofloan/ammountofloan.component'
 import { GeneratesanctionletterComponent } from './generatesanctionletter/generatesanctionletter.component';
 import { NotificationsendtooeComponent } from './notificationsendtooe/notificationsendtooe.component';
 import { VerifydetailsComponent } from './verifydetails/verifydetails.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { VerifydetailsComponent } from './verifydetails/verifydetails.component'
   ],
   imports: [
     CommonModule,
-    CreditmanagerRoutingModule
+    CreditmanagerRoutingModule,ReactiveFormsModule, FormsModule
   ]
 })
 export class CreditmanagerModule { }

@@ -16,7 +16,7 @@ export class Menu {
             ],
             creditmanager:[
                 {key:"verifydetails", label:"Verify customer Details"},
-                {key:"rateofinterest", label:"Rate of Intrest on Loan Ammount"},
+               // {key:"rateofinterest", label:"Rate of Intrest on Loan Ammount"},
                 {key:"notificationsendtooe", label:" Noftification Send to OE"},
                 {key:"generatesanctionletter", label:"Approval Sanction Letter"},
                 {key:"ammountofloan", label:"Ammount of Loan to Get customer"}
