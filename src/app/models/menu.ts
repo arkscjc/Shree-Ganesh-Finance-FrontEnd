@@ -3,10 +3,10 @@ export class Menu {
     public static menus:any[]=[
         {
             operationalexcecutive:[
-                {key:"pendingverification", label:"Incomplete verification document"},
+                {key:"pendingverification", label:"Incomplete Verification Document"},
                 {key:"sendsanctionmail", label:"Send Sanction Letter to customer"},
-                {key:"verified", label:"verified customer"},
-                {key:"verifyform", label:"verify customer form"}
+                {key:"verified", label:"Verified Customer"},
+                {key:"verifyform", label:"Rejected Customer"}
             ],
 
             relationalexcecutive:[

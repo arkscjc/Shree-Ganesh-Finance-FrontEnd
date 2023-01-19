@@ -16,6 +16,9 @@ import { SanctionLetter } from '../models/sanction-letter';
   providedIn: 'root'
 })
 export class CommonserviceService {
+  getDocRejectedCustomer() {
+    throw new Error('Method not implemented.');
+  }
   
  enquiry:Enquiry={
    enquiryId: 0,
@@ -121,6 +124,16 @@ export class CommonserviceService {
   }
   getcustomersibgledata(customerid: number) {
     return this.http.get("http://localhost:9090/customer/getSingleDataByCustomerId/"+ customerid)
+  }
+
+  getDocVerifiedCustomer()
+  {
+    return this.http.get("http://localhost:9090/customer/getAllDocVerifiedCustomer");
+  }
+
+  getDocRjectedCustomer()
+  {
+    return this.http.get("http://localhost:9090/customer/getAllDocRejectedCustomer");
   }
 
 }
