@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonserviceService } from 'src/app/common/commonservice.service';
@@ -55,14 +56,14 @@ searchText:string;
 
     }
   
-    Filterchange(){
+   
+}
 
-        
-       // this.dataSource.filter=this.searchText.trim().toLowerCase();
-
-        this.dataSource.filter=this.searchText.toLowerCase();
-
+    Filterchange1($event:any){
+    this.dataSource.filter=$event.target.value;
+    
     }
+  }
 
     Filterchange1($event:any){
     this.dataSource.filter=$event.target.value;

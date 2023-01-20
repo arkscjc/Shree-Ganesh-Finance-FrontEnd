@@ -9,8 +9,8 @@
 <th>Rate of Interest</th>
 <th>customerMobileNumber</th>
 <th>STATUS</th>
-<th>LOAN DISBURSEMENT</th>
-
+<th>SANCTION SIGN BY CUSTOMER</th>
+<th>SANCTION NOT SIGNING BY CUSTOMER</th>
 </thead>
 
 <tbody>
@@ -21,13 +21,9 @@
     <td>{{d.customerSanctionLetter.rateOfInterest}}</td>
     <td>{{d.customerMobileNumber}}</td>
     <td>{{d.customerStatus}}</td>
-    <td><button (click)="DisburseLoan()">Click</button></td>
- 
+    <td><button (click)="changecustomerstatusapprove(d.customerId,'SanctionLetterSignByCustomer')">Click</button></td>
+    <td><button (click)="changecustomerstatusreject(d.customerId,'SanctionLetterNotSignByCustomer')">Click</button></td>
   
 </tr>
 </tbody>
 </table>
-
-
-
-

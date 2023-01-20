@@ -30,6 +30,39 @@
 </table>
 </div> -->
 
+<nav class="navbar" >
+    <input class="form-control" type="text" name="customerFirstName" [(ngModel)]="customerdata" >
+
+</nav>
+<table class="table table-striped">
+<thead>
+<th>customerId</th>
+<th>customerFirstName</th>
+<th>customerLastName</th>
+<th>customerMobileNumber</th>
+<th>professionId</th>
+<th>STATUS</th>
+</thead>
+
+<tbody>
+
+<tr *ngFor="let d of customerdata">
+    <td>{{d.customerId}}</td>
+    <td>{{d.customerFirstName}}</td>
+    <td>{{d.customerLastName}}</td>
+    <td>{{d.customerMobileNumber}}</td>
+    <td>{{d.customerProfession.professionId}}</td>
+    <button (click)="singlecustomeralldata(d)">Generate Sanction letter</button>
+    <td >
+
+   </td>
+    
+  
+</tr>
+</tbody>
+</table>
+</div> -->
+
 
 
 <!-- <mat-form-field  appearance="fill">

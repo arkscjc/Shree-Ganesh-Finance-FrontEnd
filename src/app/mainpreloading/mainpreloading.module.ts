@@ -31,6 +31,7 @@ import { Ng5SliderModule } from 'ng5-slider';
 
 
 
+
 @NgModule({
   declarations: [
     AboutcompComponent,
@@ -41,6 +42,7 @@ import { Ng5SliderModule } from 'ng5-slider';
     FooterComponent,
     LoginComponent,
     EMIcalculatorComponent,
+   
  
 
    
@@ -75,6 +77,7 @@ RelationalexcecutiveModule,
     FooterComponent,
     EMIcalculatorComponent,
     LoginComponent,
+   
  
 
 

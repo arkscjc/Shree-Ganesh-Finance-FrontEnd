@@ -15,6 +15,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatStepperModule} from '@angular/material/stepper';
 import { MatInputModule } from '@angular/material/input';
+import { SanctionsignComponent } from './sanctionsign/sanctionsign.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MatInputModule } from '@angular/material/input';
     EnquiryformComponent,
     CibilcheckComponent,
     LoanfillupformComponent,
-    LoanapplicationComponent
+    LoanapplicationComponent,
+    SanctionsignComponent
   ],
   imports: [
     CommonModule,

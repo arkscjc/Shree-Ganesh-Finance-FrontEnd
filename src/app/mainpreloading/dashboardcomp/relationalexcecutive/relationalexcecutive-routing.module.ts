@@ -4,6 +4,7 @@ import { LoanapplicationComponent } from '../../loanapplication/loanapplication.
 import { CibilcheckComponent } from './cibilcheck/cibilcheck.component';
 import { EnquiryformComponent } from './enquiryform/enquiryform.component';
 import { LoanfillupformComponent } from './loanfillupform/loanfillupform.component';
+import { SanctionsignComponent } from './sanctionsign/sanctionsign.component';
 
 
 
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:"enquiryform",component:EnquiryformComponent},
   {path:"cibilcheck",component:CibilcheckComponent},
   {path:"loanfillupform",component:LoanfillupformComponent},
-  {path:"loanapplication",component:LoanapplicationComponent}
+  {path:"loanapplication",component:LoanapplicationComponent},
+  {path:"sanctionsign",component:SanctionsignComponent}
   
   
 ];

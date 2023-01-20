@@ -12,7 +12,8 @@ export class Menu {
             relationalexcecutive:[
                 {key:"enquiryform" ,label:"Loan Enquiry Form"},
                 {key:"cibilcheck", label:"All Enquired Data"},
-                {key:"loanfillupform",label:"Eligible Customer"}
+                {key:"loanfillupform",label:"Eligible Customer"},
+                {key:"sanctionsign",label:"Sanction Approval Sign"}
             ],
             creditmanager:[
                 {key:"verifydetails", label:"Verified Customer List"},

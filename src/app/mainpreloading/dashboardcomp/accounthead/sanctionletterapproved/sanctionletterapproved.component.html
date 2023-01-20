@@ -1,1 +1,30 @@
-<p>sanctionletterapproved works!</p>
+<nav class="navbar" >
+ 
+
+</nav>
+<table class="table table-striped">
+<thead>
+<th>customerId</th>
+<th>customerFirstName</th>
+<th>Rate of Interest</th>
+<th>customerMobileNumber</th>
+<th>STATUS</th>
+<th>SANCTION APPROVE</th>
+<th>SANCTION REJECT</th>
+</thead>
+
+<tbody>
+
+<tr *ngFor="let d of customerdata">
+    <td>{{d.customerId}}</td>
+    <td>{{d.customerFirstName}}</td>
+    <td>{{d.customerSanctionLetter.rateOfInterest}}</td>
+    <td>{{d.customerMobileNumber}}</td>
+    <td>{{d.customerStatus}}</td>
+    <td><button (click)="changecustomerstatusapprove(d.customerId,'SanctionLetterApproved')">Click</button></td>
+    <td><button (click)="changecustomerstatusreject(d.customerId,'SanctionLetterRejected')">Click</button></td>
+  
+</tr>
+</tbody>
+</table>
+
