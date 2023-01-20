@@ -66,6 +66,17 @@
                           <mat-label>Customer Qualifiacton</mat-label>
                           <input matInput value="{{customersingledata.customerQualification}}" readonly >
                         </mat-form-field>
+                       <br>
+                         
+                      <mat-form-field appearance="fill">
+                        <mat-label>Required Loan Amount</mat-label>
+                        <input matInput value="{{customersingledata.customerloanAmountRequired}}" readonly >
+                      </mat-form-field>
+                      
+                      <mat-form-field appearance="fill">
+                        <mat-label> Loan Tenure</mat-label>
+                        <input matInput value="{{customersingledata.customerLoanTenureInMonth}}" readonly >
+                      </mat-form-field>
           
                       <br>
   
@@ -271,6 +282,11 @@
                 <mat-form-field appearance="fill">
                     <mat-label>Customer Vehicle Model</mat-label>
                     <input matInput value="{{customersingledata.customerVehicleInformation.customerVehicleModel}}" readonly >
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill">
+                    <mat-label>Vehicle Price</mat-label>
+                    <input matInput value="{{customersingledata.customerVehicleInformation.customerVehiclePrice}}" readonly >
                   </mat-form-field>
                   <br>
     
