@@ -56,7 +56,7 @@ mainform=this._formBuilder.group({
        customerQualification: this._formBuilder.control('',Validators.required),
        customerCibilScore:this._formBuilder.control (this.cs.enquiry.enquiryCibilScore),
        customerStatus:this._formBuilder.control (this.cs.enquiry.enquiryStatus),
-       customerLoanTenureInMonth:this._formBuilder.control(0)
+       customerLoanTenureInMonth:this._formBuilder.control(0,Validators.required)
       }),
       addressDetails:this._formBuilder.group({
         
