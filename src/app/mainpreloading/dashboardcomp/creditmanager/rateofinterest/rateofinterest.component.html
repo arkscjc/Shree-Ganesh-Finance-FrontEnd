@@ -52,19 +52,27 @@
                         <label class="form-label" for="firstName">Applicant Monthaly Income</label>
                         <input type="text" id="firstName" class="form-control form-control-lg" value="{{customersingledata.customerProfession.professionMonthlyIncome}}" readonly/>
                       </div>
+                      <div class="row">
+
+                      </div>
+                      <div class="form-outline">
+                        <label class="form-label" for="firstName">Required Loan Amount</label>
+                        <input type="text" id="firstName" class="form-control form-control-lg" value="{{customersingledata.customerloanAmountRequired}}" readonly/>
+                      </div>
+                      
                     
                       <div class="row">
                             <div class="col-md-6 mb-4">
                                 <div class="form-outline">
                                     <label class="form-label" for="firstName">Maximun Permisible loan amout</label>
-                                    <input type="text" id="firstName" class="form-control form-control-lg" value="{{maximumloanAmount}}" readonly/>
+                                    <input type="text" id="firstName"   class="form-control form-control-lg" value="{{maximumloanAmount}}" readonly/>
                                 </div>           
                             </div>
 
                             <div class="col-md-6 mb-4"> 
                                 <div class="form-outline">
                                     <label class="form-label" for="firstName">Loan Amount Sanctioned</label>
-                                    <input type="text" id="firstName" class="form-control form-control-lg"  value="number" formControlName="loanAmountSanctioned" placeholder="Enter Amount"/>  
+                                    <input type="text" id="firstName" [ariaValueMax]="maximumloanAmount" class="form-control form-control-lg"  value="number" formControlName="loanAmountSanctioned" placeholder="Enter Amount"/>  
                                 </div>
                             </div>
                             

@@ -152,4 +152,26 @@ export class CommonserviceService {
   getCustomerDocumentsVerifiedData(){
     return this.http.get("http://localhost:9090/customer/getAllDocVerifiedCustomer")
   }
+
+  getAllGeneratedSanctionByCm()
+  {
+    return this.http.get("http://localhost:9090/sanctionletter/getAllGenratedSanctionByCm")
+  }
+
+
+  CustomerSanctionApproveddData(customerid: number, customerStatus:string)
+  {
+    alert(customerid);
+    return this.http.put("http://localhost:9090/sanctionletter/customerApplicationStatusSanctioned/"+customerid+"/"+customerStatus,null)
+  }
+
+  getAllSAnctionApprovedDataByAh()
+  {
+    return this.http.get("http://localhost:9090/sanctionletter/getAllSanctionLetterApprovedCustomers")
+  }
+
+  getAllSanctionLetterSignByCustomer()
+  {
+    return this.http.get("http://localhost:9090/sanctionletter/getAllSanctionLetterSignByCustomer")
+  }
 }
