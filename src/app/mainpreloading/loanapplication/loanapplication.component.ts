@@ -56,7 +56,8 @@ mainform=this._formBuilder.group({
        customerQualification: this._formBuilder.control('',Validators.required),
        customerCibilScore:this._formBuilder.control (this.cs.enquiry.enquiryCibilScore),
        customerStatus:this._formBuilder.control (this.cs.enquiry.enquiryStatus),
-       customerLoanTenureInMonth:this._formBuilder.control(0)
+       customerLoanTenureInMonth:this._formBuilder.control(0),
+       customerloanAmountRequired:this._formBuilder.control(0),
       }),
       addressDetails:this._formBuilder.group({
         
@@ -183,6 +184,7 @@ loanStatus:this._formBuilder.control(''),
 	      customerVehicleChasisNo:this._formBuilder.control(''),
 	       customerVehicleNo:this._formBuilder.control(''),
 	       customerVehicleRcNo:this._formBuilder.control(''),
+         customerVehiclePrice:this._formBuilder.control(0),
         }),
         customerbankDetails:this._formBuilder.group({
           //customerBankDetails: 
@@ -243,6 +245,8 @@ this.cs.customerdetails.customerCibilScore=this.mainform.get("personalDetails").
 this.cs.customerdetails.customerStatus=this.mainform.get("personalDetails").get("customerStatus").value;
 this.cs.customerdetails.customerQualification=this.mainform.get("personalDetails").get("customerQualification").value;
 this.cs.customerdetails.customerLoanTenureInMonth=this.mainform.get("personalDetails").get("customerLoanTenureInMonth").value;
+this.cs.customerdetails.customerloanAmountRequired=this.mainform.get("personalDetails").get("customerloanAmountRequired").value;
+
 
 this.cs.customerdetails.customerAddress.customerAddressId=this.mainform.get("addressDetails").get("customerAddressId").value;
 this.cs.customerdetails.customerAddress.localAddress=this.mainform.get("localAddress").value;

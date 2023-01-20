@@ -66,10 +66,16 @@
                           <mat-label>Customer Qualifiacton</mat-label>
                           <input matInput placeholder="Qualifiacton" formControlName="customerQualification" >
                         </mat-form-field>
-                        
+                        <br><br>
+                        <h3>Other</h3>
                         <mat-form-field appearance="fill">
                           <mat-label>Loan Tenure</mat-label>
-                          <input matInput  type="number" placeholder="Qualifiacton" formControlName="customerLoanTenureInMonth" >
+                          <input matInput  type="number"  formControlName="customerLoanTenureInMonth" >
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                          <mat-label>Required Loan Amount</mat-label>
+                          <input matInput  type="number"  formControlName="customerloanAmountRequired" >
                         </mat-form-field>
           
                       <br>
@@ -164,7 +170,7 @@
                     
                     <mat-form-field appearance="fill">
                       <mat-label>Pincode</mat-label>
-                      <input matInput type="number" placeholder="Pincode" formControlName="pincode" >
+                      <input matInput type="number"  formControlName="pincode" >
                     </mat-form-field>
         
                     
@@ -285,7 +291,13 @@
                     <input matInput placeholder="customerVehicleModel" formControlName="customerVehicleModel" >
                   </mat-form-field>
                   <br>
+                  <mat-form-field appearance="fill">
+                    <mat-label>Vehicle Price</mat-label>
+                    <input matInput placeholder="customerVehiclePrice" formControlName="customerVehiclePrice" >
+                  </mat-form-field>
+                  <br>
     
+                  
                  
                 <div>
 

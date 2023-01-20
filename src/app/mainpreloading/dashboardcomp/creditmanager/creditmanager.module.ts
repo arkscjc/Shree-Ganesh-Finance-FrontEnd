@@ -9,6 +9,11 @@ import { NotificationsendtooeComponent } from './notificationsendtooe/notificati
 import { VerifydetailsComponent } from './verifydetails/verifydetails.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import {MatPaginatorModule} from '@angular/material/paginator';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -20,7 +25,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    CreditmanagerRoutingModule,ReactiveFormsModule, FormsModule
-  ]
+    CreditmanagerRoutingModule,ReactiveFormsModule, FormsModule, MatPaginatorModule ]
 })
 export class CreditmanagerModule { }
