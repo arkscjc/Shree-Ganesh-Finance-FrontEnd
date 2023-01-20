@@ -136,6 +136,16 @@ export class CommonserviceService {
     return this.http.put(this.url,null)
   }
 
+  getDocVerifiedCustomer()
+  {
+    return this.http.get("http://localhost:9090/customer/getAllDocVerifiedCustomer");
+  }
+
+  getDocRjectedCustomer()
+  {
+    return this.http.get("http://localhost:9090/customer/getAllDocRejectedCustomer");
+  }
+
   customerSanctionLetterSave(customer:CustomerDetails){
     return this.http.put("http://localhost:9090/sanctionletter/generateSanctionLetterByCustomer/",customer)
   }
