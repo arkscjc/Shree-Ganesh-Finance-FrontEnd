@@ -7,8 +7,7 @@ import { CustomerDetails } from 'src/app/models/customer-details';
 import {AfterViewInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
-
-
+import {MatSort} from '@angular/material/sort';
 
 
 
@@ -20,25 +19,28 @@ import {MatTableDataSource} from '@angular/material/table';
   styleUrls: ['./verifydetails.component.scss']
 })
 export class VerifydetailsComponent  {
-  customerdata: CustomerDetails[];
   
   
+  displayedColumns: string[] = ['customerId', 'customerFirstName', 'customerLastName','customerMobileNumber', 'action' ]; // if we changed only name position here then 
+  //column  will automatically changed. 
+  dataSource :any
+  @ViewChild(MatPaginator) paginator : MatPaginator;
+  @ViewChild(MatSort) sort : MatSort; 
    
-  
-   
-
-  constructor(private _formBuilder: FormBuilder, private cs:CommonserviceService,private route:Router) {
-
-    
-  }
+searchText:string;
+  constructor(private _formBuilder: FormBuilder, private cs:CommonserviceService,private route:Router) {}
   
      
     
-
+  customerdata: CustomerDetails[];
     ngOnInit():void
     {
       this.cs.getCustomerDocumentsVerifiedData().subscribe((data:CustomerDetails[])=>{
         this.customerdata=data
+
+        this.dataSource= new MatTableDataSource<CustomerDetails>(this.customerdata);
+        this.dataSource.paginator=this.paginator; 
+        this.dataSource.sort=this.sort;
         
       })
     }
@@ -53,5 +55,17 @@ export class VerifydetailsComponent  {
 
     }
   
+    Filterchange(){
+
+        
+       // this.dataSource.filter=this.searchText.trim().toLowerCase();
+
+        this.dataSource.filter=this.searchText.toLowerCase();
+
+    }
+
+    Filterchange1($event:any){
+    this.dataSource.filter=$event.target.value;
     
-}
+    }
+  }

@@ -1,7 +1,7 @@
 
 
 <form  [formGroup]="mainform" >
-    <mat-horizontal-stepper >    
+    <mat-horizontal-stepper  linear>    
       <mat-step [stepControl]="mainform.controls['personalDetails']">
               <div formGroupName="personalDetails">
                   <ng-template matStepLabel> Personal <br> Details </ng-template>
@@ -297,7 +297,7 @@
                   </mat-form-field>
                   <br>
     
-                  
+
                  
                 <div>
 
