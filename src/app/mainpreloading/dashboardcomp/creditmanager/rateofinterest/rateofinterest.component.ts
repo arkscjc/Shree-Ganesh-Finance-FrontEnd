@@ -15,14 +15,17 @@ export class RateofinterestComponent {
   constructor(private _formBuilder:FormBuilder, private cs:CommonserviceService,private route:Router,
     private ActivatedRoute:ActivatedRoute ){}
 
+    
     maximumloanAmount:number
     monthlyEmiAmount:number
-    customersingledata:CustomerDetails
     value1:number
     value2:number
     temprateofinterrest:number
     value3:number
     totalpaybleamount:number
+
+    customersingledata:CustomerDetails
+
   ngOnInit():void{
 
     this.ActivatedRoute.queryParams.subscribe((params)=>{
@@ -72,7 +75,7 @@ this.totalpaybleamount=(this.monthlyEmiAmount)*(this.customersingledata.customer
   sanctionletterSubmit(customerdata:CustomerDetails){
     
 
-    customerdata.customerSanctionLetter.monthlyEmiAmount=this.SanctionLetterDetails.get("monthlyEmiAmount").value;
+    
    
     customerdata.customerSanctionLetter.applicantName=customerdata.customerFirstName+" "+customerdata.customerMiddleName+" "+customerdata.customerLastName ;
     customerdata.customerSanctionLetter.loanAmountSanctioned=this.SanctionLetterDetails.get("loanAmountSanctioned").value;
@@ -81,13 +84,14 @@ this.totalpaybleamount=(this.monthlyEmiAmount)*(this.customersingledata.customer
     customerdata.customerSanctionLetter.sanctionDate=this.SanctionLetterDetails.get("sanctionDate").value;
     customerdata.customerSanctionLetter.loanTenure=this.customersingledata.customerLoanTenureInMonth;
     customerdata.customerSanctionLetter.totalLoanAmountWithInterest=this.totalpaybleamount;
+    customerdata.customerSanctionLetter.contactDetails=customerdata.customerMobileNumber;
     this.cs.customerdetails=customerdata;
 
     alert(customerdata.customerSanctionLetter.monthlyEmiAmount)
     alert(customerdata.customerSanctionLetter.sanctionDate)
   
-
-
+    this.cs.customerSanctionLetterSave(customerdata).subscribe();
+          
   }
 
 

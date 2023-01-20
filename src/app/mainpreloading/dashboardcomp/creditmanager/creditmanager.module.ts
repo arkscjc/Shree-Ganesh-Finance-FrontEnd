@@ -8,6 +8,16 @@ import { GeneratesanctionletterComponent } from './generatesanctionletter/genera
 import { NotificationsendtooeComponent } from './notificationsendtooe/notificationsendtooe.component';
 import { VerifydetailsComponent } from './verifydetails/verifydetails.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+
+
+
+
 
 
 @NgModule({
@@ -20,7 +30,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    CreditmanagerRoutingModule,ReactiveFormsModule, FormsModule
+    CreditmanagerRoutingModule,ReactiveFormsModule, FormsModule, MatPaginatorModule, 
+    MatTableModule ,MatSortModule ,MatFormFieldModule ,MatInputModule, MatButtonModule
   ]
 })
 export class CreditmanagerModule { }

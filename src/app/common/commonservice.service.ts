@@ -77,8 +77,8 @@ export class CommonserviceService {
        loanStatus: ''
      }
    ],
-   customerSanctionLetter: new SanctionLetter
-  
+   customerSanctionLetter: new SanctionLetter,
+   customerloanAmountRequired: 0
  }
 
  
@@ -146,4 +146,10 @@ export class CommonserviceService {
     return this.http.get("http://localhost:9090/customer/getAllDocRejectedCustomer");
   }
 
+  customerSanctionLetterSave(customer:CustomerDetails){
+    return this.http.put("http://localhost:9090/sanctionletter/generateSanctionLetterByCustomer/",customer)
+  }
+  getCustomerDocumentsVerifiedData(){
+    return this.http.get("http://localhost:9090/customer/getAllDocVerifiedCustomer")
+  }
 }

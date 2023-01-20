@@ -1,4 +1,4 @@
-<p>verifydetails works!</p>
+<!-- <p>verifydetails works!</p>
 
 
 <div class="alert alert-secondary text-center"><h1>Customer Database</h1></div>
@@ -28,4 +28,83 @@
 </tr>
 </tbody>
 </table>
-</div>
+</div> -->
+
+
+
+<!-- <mat-form-field  appearance="fill">
+<mat-label>Filter Table</mat-label>
+<input matInput placeholder=""search>
+</mat-form-field>
+<div>
+<table mat-table matSort [dataSource]="dataSource">
+<ng-container matColumnDef="customer id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Customer ID</th>
+    <td mat-cell *matCellDef="let row">{{row.customerid}}</td>
+</ng-container>
+<ng-container matColumnDef="customer FirstName">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Customer First Name </th>
+    <td mat-cell *matCellDef="let row">{{row.customerFirstName}}</td>
+</ng-container>
+<ng-container matColumnDef="customer LastName">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Customer Last Name</th>
+    <td mat-cell *matCellDef="let row">{{row.customerLirstName}}</td>
+</ng-container>
+
+<tr mat-header-row *matHeaderRowDef="displayedColumn"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumn"></tr>
+</table>
+
+</div> -->
+
+
+<div class="mat-elevation-z8">
+ 
+<mat-form-field>
+
+    <mat-label class="label">Filter</mat-label>
+    <input matInput [(ngModel)]="searchText" placeholder="filter" (keyup)="Filterchange()">
+</mat-form-field>
+
+    <table class="table"  mat-table matSort [dataSource]="dataSource">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="customerId">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Customer Id</th>
+        <td mat-cell *matCellDef="let element"> {{element.customerId}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="customerFirstName">
+        <th mat-sort-header mat-header-cell *matHeaderCellDef>Customer FirstName</th>
+        <td mat-cell *matCellDef="let element">{{element.customerFirstName}}</td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="customerLastName">
+        <th mat-header-cell *matHeaderCellDef>Customer LastName</th>
+        <td mat-cell *matCellDef="let element"> {{element.customerLastName}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="customerMobileNumber">
+        <th mat-header-cell *matHeaderCellDef>Customer Mobile No</th>
+        <td mat-cell *matCellDef="let element"> {{element.customerMobileNumber}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="action"  class="example-button-row">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element"><button  mat-raised-button color="primary" (click)="singlecustomeralldata(element)">SHOW DATA</button> 
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[1, 10, 20]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+  

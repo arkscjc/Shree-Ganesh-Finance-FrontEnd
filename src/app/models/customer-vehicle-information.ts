@@ -6,5 +6,6 @@ export class CustomerVehicleInformation {
 	customerVehicleChasisNo:string
 	customerVehicleNo:string
 	customerVehicleRcNo:string
+	customerVehiclePrice:number
 
 }

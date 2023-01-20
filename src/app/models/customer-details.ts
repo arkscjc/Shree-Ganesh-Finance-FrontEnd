@@ -34,4 +34,5 @@ export class CustomerDetails {
   customerSanctionLetter:SanctionLetter
 	customerVehicleInformation:CustomerVehicleInformation
 	customerBankDetails: CustomerBankDetails
+	customerloanAmountRequired:number
 }

@@ -26,6 +26,11 @@
               
               <form [formGroup]="SanctionLetterDetails" (ngSubmit)="sanctionletterSubmit(customersingledata)">
                   <div class="col-md-12 mb-4">
+                   
+                    <div class="form-outline">
+                      <label class="form-label" for="firstName">Applicant ID</label>
+                    <input type="text" id="firstName" class="form-control form-control-lg"  value="{{customersingledata.customerId}}" readonly/>
+                  </div>
 
                     <div class="form-outline">
                         <label class="form-label" for="firstName">Applicant Name</label>
@@ -34,7 +39,7 @@
 
                     <div class="row">
                         <div class="form-outline">
-                            <label class="form-label" for="firstName">contact Details</label>
+                            <label class="form-label" for="firstName">Contact Details</label>
                             <input type="text" id="firstName" class="form-control form-control-lg" value="{{customersingledata.customerMobileNumber}}" readonly/>
                           </div>
                     </div>
@@ -47,19 +52,27 @@
                         <label class="form-label" for="firstName">Applicant Monthaly Income</label>
                         <input type="text" id="firstName" class="form-control form-control-lg" value="{{customersingledata.customerProfession.professionMonthlyIncome}}" readonly/>
                       </div>
+                      <div class="row">
+
+                      </div>
+                      <div class="form-outline">
+                        <label class="form-label" for="firstName">Required Loan Amount</label>
+                        <input type="text" id="firstName" class="form-control form-control-lg" value="{{customersingledata.customerloanAmountRequired}}" readonly/>
+                      </div>
+                      
                     
                       <div class="row">
                             <div class="col-md-6 mb-4">
                                 <div class="form-outline">
                                     <label class="form-label" for="firstName">Maximun Permisible loan amout</label>
-                                    <input type="text" id="firstName" class="form-control form-control-lg" value="{{maximumloanAmount}}" readonly/>
+                                    <input type="text" id="firstName"   class="form-control form-control-lg" value="{{maximumloanAmount}}" readonly/>
                                 </div>           
                             </div>
 
                             <div class="col-md-6 mb-4"> 
                                 <div class="form-outline">
                                     <label class="form-label" for="firstName">Loan Amount Sanctioned</label>
-                                    <input type="text" id="firstName" class="form-control form-control-lg"  value="number" formControlName="loanAmountSanctioned" placeholder="Enter Amount"/>  
+                                    <input type="text" id="firstName" [ariaValueMax]="maximumloanAmount" class="form-control form-control-lg"  value="number" formControlName="loanAmountSanctioned" placeholder="Enter Amount"/>  
                                 </div>
                             </div>
                             
@@ -118,20 +131,6 @@
                   
                   
   
-                <div class="row">
-                  <div class="col-md-6 mb-4 d-flex align-items-center">
-  
-                    <div class="form-outline datepicker w-100">
-                        <label for="birthdayDate" class="form-label">Sanction Date</label>
-                      <input type="date" class="form-control form-control-lg" id="birthdayDate" formControlName="sanctionDate" placeholder="enter sanctionDate"/>  
-                      
-                    </div>
-                    
-  
-                  </div>
-                  
-                  
-                </div>
 
               
   
