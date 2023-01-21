@@ -7,7 +7,7 @@ import { CibilcheckComponent } from './cibilcheck/cibilcheck.component';
 import { LoanfillupformComponent } from './loanfillupform/loanfillupform.component';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { LoanapplicationComponent } from '../../loanapplication/loanapplication.component';
@@ -16,6 +16,13 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatStepperModule} from '@angular/material/stepper';
 import { MatInputModule } from '@angular/material/input';
 import { SanctionsignComponent } from './sanctionsign/sanctionsign.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatSelectModule} from '@angular/material/select';
+
+
+
 
 
 @NgModule({
@@ -30,7 +37,8 @@ import { SanctionsignComponent } from './sanctionsign/sanctionsign.component';
     CommonModule,
     RelationalexcecutiveRoutingModule,
     MatFormFieldModule,ReactiveFormsModule,
-    MatButtonModule,MatIconModule,MatStepperModule,MatInputModule
+    MatButtonModule,MatIconModule,MatStepperModule,MatInputModule,MatTableModule,MatPaginatorModule,MatSortModule, 
+    FormsModule, MatSelectModule
   ],
   exports:[
     LoanapplicationComponent
