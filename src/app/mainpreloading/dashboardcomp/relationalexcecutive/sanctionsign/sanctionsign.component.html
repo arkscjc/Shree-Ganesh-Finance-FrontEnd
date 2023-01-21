@@ -1,29 +1,48 @@
-<nav class="navbar" >
- 
-
-</nav>
-<table class="table table-striped">
-<thead>
-<th>customerId</th>
-<th>customerFirstName</th>
-<th>Rate of Interest</th>
-<th>customerMobileNumber</th>
-<th>STATUS</th>
-<th>SANCTION SIGN BY CUSTOMER</th>
-<th>SANCTION NOT SIGNING BY CUSTOMER</th>
-</thead>
-
-<tbody>
-
-<tr *ngFor="let d of customerdata">
-    <td>{{d.customerId}}</td>
-    <td>{{d.customerFirstName}}</td>
-    <td>{{d.customerSanctionLetter.rateOfInterest}}</td>
-    <td>{{d.customerMobileNumber}}</td>
-    <td>{{d.customerStatus}}</td>
-    <td><button (click)="changecustomerstatusapprove(d.customerId,'SanctionLetterSignByCustomer')">Click</button></td>
-    <td><button (click)="changecustomerstatusreject(d.customerId,'SanctionLetterNotSignByCustomer')">Click</button></td>
+<div class="text-center div1">
+  <h1>Sanction Letter For Signature</h1>
+</div>
+<div class="container">
+  <table class="table table-striped" style="text-align: center;">
+    <tbody>
+      <tr>
+        <th>CUSTOMERId</th>
+        <th>CUSTOMER NAME</th>
+        <th>RATE OF INTREST</th>
+        <th>MOBILE NUMBER</th>
+        <th>STATUS</th>
+        <th>Action</th>
+      </tr>
   
-</tr>
-</tbody>
-</table>
+
+    <tr *ngFor="let d of customerdata">
+      <td>{{ d.customerId }}</td>
+      <td>{{ d.customerFirstName }}</td>
+      <td>{{ d.customerSanctionLetter.rateOfInterest }}</td>
+      <td>{{ d.customerMobileNumber }}</td>
+      <td>{{ d.customerStatus }}</td>
+      <td>
+        <button  class="btn-outline-success"
+          (click)="
+            changecustomerstatusapprove(
+              d.customerId,
+              'SanctionLetterSignByCustomer'
+            )
+          "
+        >
+          Sign
+        </button>
+        <button  class="btn-outline-danger"
+        (click)="
+          changecustomerstatusreject(
+            d.customerId,
+            'SanctionLetterNotSignByCustomer'
+          )
+        "
+      >
+        Not sign
+      </button>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+</div>
