@@ -174,4 +174,11 @@ export class CommonserviceService {
   {
     return this.http.get("http://localhost:9090/sanctionletter/getAllSanctionLetterSignByCustomer")
   }
+
+  loanDisbursment(customerid:number){
+    alert("service");
+    alert(customerid)
+  
+    return this.http.post("http://localhost:9090/loandisbursement/loandisbursementbyAH/"+customerid,null)
+  }
 }
