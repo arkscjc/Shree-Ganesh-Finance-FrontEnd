@@ -59,8 +59,15 @@ searchText:string;
    
 
 
-    Filterchange(){
-   // this.dataSource.filter=$event.target.value;
+    // Filterchange($event:any){
+    // this.dataSource.filter=$event.target.value;
     
-    }
+    // }
+
+    Filterchange(){
+     this.dataSource.filter=this.searchText.trim().toLowerCase();
+      
+      
+       }
+
   }
