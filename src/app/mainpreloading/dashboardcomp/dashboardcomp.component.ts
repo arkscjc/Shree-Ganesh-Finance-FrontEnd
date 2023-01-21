@@ -20,12 +20,12 @@ ngOnInit()
 {
   this.userRole=localStorage.getItem("role");
   this.menus=Menu.menus;
-  if(this.userRole==="operationalexecutive")
+  if(this.userRole==="operationalexcecutive")
   {
-    this.header="Operational Executive";
+    this.header="Operational Executive ";
     this.email="operationexe@gmail.com";
   }
-  else if(this.userRole==="relationalexecutive")
+  else if(this.userRole==="relationalexcecutive")
   {
     this.header="Relational Executive";
     this.email="relationalexe@gmail.com";

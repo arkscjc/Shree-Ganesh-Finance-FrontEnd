@@ -1,5 +1,5 @@
-<p>cibilcheck works!</p>
-<!-- <div class="alert alert-secondary text-center"><h1>Enquiry Database</h1></div>
+
+<!-- <div class=" text-center div1"><h1>Total Enquiry Done</h1></div>
 <div class="container">
 <table class="table table-striped">
 <tbody>
@@ -24,7 +24,9 @@
 </tbody>                                                                                                                                                    
 </table>
 </div> -->
-
+<div class="text-center div1">
+  <h1>Total Enquiry Done</h1>
+</div>
 <div class="mat-elevation-z8">
  
     <mat-form-field appearance="fill">
@@ -51,39 +53,35 @@
           <!-- Position Column -->
           <ng-container matColumnDef="EnquiryId">
             
-            <th style="color: rgb(63, 154, 173); font-size: 20px; " mat-header-cell mat-sort-header *matHeaderCellDef>Enquiry Id</th>
-            <td style="color: rgb(1, 16, 19); font-size: 16px; " mat-cell *matCellDef="let element"> {{element.enquiryId}} </td>
+            <th class="headline" mat-header-cell mat-sort-header *matHeaderCellDef>Enquiry Id</th>
+            <td class="bodyline"  mat-cell *matCellDef="let element"> {{element.enquiryId}} </td>
           </ng-container>
       
           <!-- Name Column -->
           <ng-container matColumnDef="EnquiryName">
-            <th style="color: rgb(63, 154, 173); font-size: 20px; " mat-sort-header mat-header-cell *matHeaderCellDef>Enquiry First Name</th>
-            <td style="color: rgb(1, 16, 19); font-size: 16px; " mat-cell *matCellDef="let element">{{element.enquiryFirstName}}</td>
+            <th class="headline" mat-sort-header mat-header-cell *matHeaderCellDef>Enquiry  Name</th>
+            <td class="bodyline" mat-cell *matCellDef="let element">{{element.enquiryFirstName}} {{element.enquiryLastName}}</td>
           </ng-container>
       
-          <!-- Weight Column -->
-          <ng-container matColumnDef="Enquiryaddress">
-            <th  style="color: rgb(63, 154, 173); font-size: 20px; " mat-header-cell *matHeaderCellDef>Enquiry Last Name</th>
-            <td style="color: rgb(1, 16, 19); font-size: 16px; "mat-cell *matCellDef="let element"> {{element.enquiryLastName}} </td>
-          </ng-container>
+          
       
           <!-- Symbol Column -->
           <ng-container matColumnDef="EnquiryMobileNumber">
-            <th style="color: rgb(63, 154, 173); font-size: 20px; " mat-header-cell *matHeaderCellDef>Enquiry Mobile No</th>
-            <td style="color: rgb(1, 16, 19); font-size: 16px; " mat-cell *matCellDef="let element"> {{element.enquiryMobileNumber}} </td>
+            <th class="headline" mat-header-cell *matHeaderCellDef>Enquiry Mobile</th>
+            <td class="bodyline" mat-cell *matCellDef="let element"> {{element.enquiryMobileNumber}} </td>
           </ng-container>
     
           <ng-container matColumnDef="EnquiryMail"  >
-            <th style="color: rgb(63, 154, 173); font-size: 20px; " mat-header-cell *matHeaderCellDef>Enquiry Email</th>
-            <td style="color: rgb(1, 16, 19); font-size: 16px; " mat-cell *matCellDef="let element">{{element.enquiryEmail}}</td>
+            <th class="headline" mat-header-cell *matHeaderCellDef>Enquiry Email</th>
+            <td class="bodyline" mat-cell *matCellDef="let element">{{element.enquiryEmail}}</td>
           </ng-container>
 
           <ng-container matColumnDef="Enquirystatus"  >
-            <th style="color: rgb(63, 154, 173); font-size: 20px; " mat-header-cell *matHeaderCellDef>Enquiry Email</th>
-            <td style="color: rgb(1, 16, 19); font-size: 16px; " mat-cell *matCellDef="let element">{{element.enquiryStatus}}</td>
+            <th class="headline" mat-header-cell *matHeaderCellDef>Enquiry Status</th>
+            <td class="bodyline" mat-cell *matCellDef="let element">{{element.enquiryStatus}}</td>
           </ng-container>
       
-          <tr style="color: rgb(63, 154, 173); font-size: 20px; " mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr class="headline" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
       

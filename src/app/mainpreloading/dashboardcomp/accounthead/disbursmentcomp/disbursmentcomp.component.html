@@ -1,28 +1,29 @@
-<nav class="navbar" >
- 
-
-</nav>
-<table class="table table-striped">
-<thead>
+<div class="text-center div1">
+    <h1>Sanctioned Letter signed by customer</h1>
+  </div>
+  
+<table class="table table-striped" style="text-align: center;">
+    <tbody>
+        <tr>
 <th>customerId</th>
-<th>customerFirstName</th>
+<th>Name</th>
 <th>Rate of Interest</th>
-<th>customerMobileNumber</th>
+<th>Mobile Number</th>
 <th>STATUS</th>
 <th>LOAN DISBURSEMENT</th>
 
-</thead>
+</tr>
 
-<tbody>
 
 <tr *ngFor="let d of customerdata">
     <td>{{d.customerId}}</td>
-    <td>{{d.customerFirstName}}</td>
+    <td>{{d.customerFirstName}} {{d.customerLastName}}</td>
     <td>{{d.customerSanctionLetter.rateOfInterest}}</td>
     <td>{{d.customerMobileNumber}}</td>
     <td>{{d.customerStatus}}</td>
-    <td><button (click)="DisburseLoan(d.customerId)">Click</button>
+      <td><button (click)="DisburseLoan(d.customerId)">Click</button>
     </td>
+
  
   
 </tr>

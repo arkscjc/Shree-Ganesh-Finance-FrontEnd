@@ -10,38 +10,22 @@ blockquote {
   margin: 0 0 1rem;
 }
 
-.left-title {
-  font-size: 15px;
-  font-weight: 500;
-  color: gray;
-}
+
 
 .result {
   font-size: 16px;
   font-weight: 600;
-  color: darkgreen;
+  color: rgb(3, 73, 3);
+  text-shadow: 0 0 15px rgb(255, 255, 255);
 }
 
-h5,
-h6 {
-  color: gray;
-}
+
 
 .active {
-  background-color: lightgray;
+  background-color: rgb(255, 255, 255);
 }
 
-h1 {
-  font-size: 35px;
-  color: gray;
-}
 
-@media only screen and (max-width: 768px) {
-  h1 {
-    font-size: 15px;
-    color: gray;
-  }
-}
 
 @media only screen and (min-width: 992px) {
   h1 {
@@ -57,6 +41,7 @@ h1 {
   font-size: 15px;
   font-weight: 500;
   color: black;
+  text-shadow: 0 0 1px white;
 }
 
 .result {
@@ -68,25 +53,15 @@ h5,
 h6 {
   color: rgb(0, 0, 0);
   font-weight: 600;
+  font-size: small;
 }
 
 .active {
-  background-color: red;
+  background-color: #0DB9F0;
 }
 
 
-h1 {
-  font-size: 35px;
-  color: gray;
-}
 
-@media only screen and (max-width: 768px) {
-  h1 {
-    font-size: 15px;
-    color: gray;
-  }
-
-}
 
 @media only screen and (min-width: 992px) {
   h1 {
@@ -96,12 +71,32 @@ h1 {
 }
 
 .divbox {
-  background-color: rgb(250, 207, 207);
+  background-color: #31b4adbd;
 padding-top: 10px;
 }
 .divouterbox{
 
-  outline: 3px solid rgb(20, 0, 109);
-  border-radius: 10px;
+ box-shadow: 5px 5px 10px rgba(15, 15, 15, 0.575);
+ 
 
+}
+.well2{
+  padding-top: 17px;
+  padding-bottom: 10px;
+}
+
+
+.maindiv{
+background:-webkit-linear-gradient(left,#dafffd,#51f0e8) ;
+
+height: 1400px;
+}
+
+.headingFont{
+padding-left: 150px;
+text-shadow: 0 0 2px white;
+
+}
+.TextIn{
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.473);
 }

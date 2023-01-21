@@ -34,7 +34,7 @@ ngOnInit():void
   })
 }
 
-displayedColumns: string[] = ['EnquiryId', 'EnquiryName', 'Enquiryaddress','EnquiryMobileNumber', 'EnquiryMail','Enquirystatus' ];
+displayedColumns: string[] = ['EnquiryId', 'EnquiryName','EnquiryMobileNumber', 'EnquiryMail','Enquirystatus' ];
 
  
 
