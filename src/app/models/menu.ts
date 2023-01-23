@@ -26,6 +26,10 @@ export class Menu {
                 {key:"disburseammount",label:"Disbursment of Amount"},
                 {key:"ledgergenerate",label:"genration of Ledger"},
                 {key:"sanctionletterapproved", label:"Sanction letter "}
+            ],
+            customer:[
+                {key:"customercomp",label:"Loan Status"}
+               
             ]
 
         

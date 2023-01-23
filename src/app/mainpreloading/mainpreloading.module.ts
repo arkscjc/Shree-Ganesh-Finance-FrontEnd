@@ -26,6 +26,7 @@ import { LoanapplicationComponent } from './loanapplication/loanapplication.comp
 import { BrowserModule } from '@angular/platform-browser';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { Ng5SliderModule } from 'ng5-slider';
+import { CustomerModule } from './dashboardcomp/customer/customer.module';
 
 
 
@@ -65,7 +66,7 @@ RelationalexcecutiveModule,
     CreditmanagerRoutingModule,
     OperationalexcecutiveRoutingModule,
     RelationalexcecutiveRoutingModule,
-    MatStepperModule
+    MatStepperModule, CustomerModule
    
   ],
   exports:[

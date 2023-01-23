@@ -181,4 +181,9 @@ export class CommonserviceService {
   
     return this.http.post("http://localhost:9090/loandisbursement/loandisbursementbyAH/"+customerid,null)
   }
+
+  getCustomerLogin(customerid:any,customermobile:any){
+
+     return this.http.get("http://localhost:9090/customer/getAllLoanDisbursedData/"+customerid+"/"+customermobile)
+  }
 }

@@ -1,7 +1,7 @@
 export class Customer {
 
 
-    username:string
+    username:any
     password:any
     name:string;
     mobno:number;
